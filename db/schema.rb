@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140328210903) do
+ActiveRecord::Schema.define(version: 20140328211114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "matches", force: true do |t|
+    t.integer "team1"
+    t.integer "team2"
+    t.integer "winner"
+    t.integer "season_id"
+    t.integer "challonge_match_number"
+    t.text    "challonge_match_csv"
+    t.integer "challonge_week"
+  end
 
   create_table "players", force: true do |t|
     t.string  "name"
