@@ -1,5 +1,7 @@
 Player.delete_all
 Team.delete_all
+Match.delete_all
+Season.delete_all
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
@@ -8,6 +10,8 @@ Team.delete_all
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
 
 j_chan = Team.create(name: "J-Chan All-Stars")
 
@@ -119,3 +123,12 @@ abeysitters.players << dylan_heister
 abeysitters.players << abe_lusk 
 abeysitters.players << jonathan_pena
 
+season1 = Season.create(number: 1)
+season1.teams << j_chan
+season1.teams << scryducks
+season1.teams << cackasaurus
+season1.teams << clockwerk_beats
+season1.teams << jung_gunz
+season1.teams << team_handsome
+season1.teams << abeysitters
+season1.teams << loam
