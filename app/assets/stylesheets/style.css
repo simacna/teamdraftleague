@@ -1,0 +1,178 @@
+body {
+	font-family: Old Standard TT;
+	font-size: 16px;
+	display: block;
+	color: rgb(70,70,90);
+}
+table {
+	margin: 0 auto;
+}
+h1 {
+	font-size: 56px;
+}
+h2 {
+	font-size: 36px;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Site Structure */
+.wrap {
+	width: 650px;
+	margin: 0 auto;
+	padding: 15px;
+	display: table;
+}
+.homelogo {
+	width: 650px;
+	float: left;
+	display: block;
+	padding-top: 5px;
+}
+.schedule {
+	width: 650px;
+	float: right;
+	display: block;
+	padding-top: 50px;
+}
+.logo {
+	height: 520px;
+	width: 650px;
+	margin: 0 auto;
+	margin-top: 15px;
+	background-image: url('../assets/logo.jpg');
+	background-size: cover;
+	display: table;
+}
+.standings {
+	height: 300px;
+	width: 650px;
+	margin: 0 auto;
+	padding-top: 50px;
+	display: table;
+}
+.bios {
+	width: 450px;
+	text-align: justify;
+	margin: 0 auto;
+	padding-top: 50px;
+	display: table;
+	font-family: Old Standard TT;
+}
+.bios h1 {
+	text-align: center;
+	font-family: Lato, sans-serif;
+}
+.bios h2 {
+	text-align: center;
+	font-family: Lato, sans-serif;
+}
+.bios h3 {
+	text-align: center;
+	font-family: Lato, sans-serif;
+}
+.pagetitle {
+	border-bottom: 1px solid rgb(70,70,90);
+	line-height: 40px;
+	margin-bottom: 50px;
+}
+
+/* Table Styling */
+table {
+	border-collapse: collapse;
+	text-align: center;
+	border: none;
+}
+th {
+	font-size: 16px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: rgba(220,220,220,.8);
+	font-family: Lato, sans-serif;
+}
+td {
+	padding: 2px;
+	font-size: 16px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+thead {
+	margin-top: 50px;
+}
+tbody tr:hover {
+	background-color: rgba(250,250,250,.8);
+}
+.standingstable {
+	width: 450px;
+}
+.standingstable td {
+	font-size: 16px;
+}
+.standingstable .columntitle {
+	font-size: 17px;
+}
+.scheduletable {
+	width: 450px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.tabletitle {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 25px;
+	background-color: rgba(70,70,70,.3);
+
+}
+.teamname {
+	text-align: left;
+	width: 137px;
+}
+.result {
+	width: 26px;
+}
+.standingstable .teamname {
+	padding-left: 30px;
+}
+.lastrow {
+	border-bottom: none;
+}
+.columntitle {
+	font-size: 14px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.round {
+	padding-top: 5px;
+}
+.rounddate {
+	padding-bottom: 5px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 650px)  {
+	body .wrap {
+		width: 450px;
+	}
+	body .homelogo {
+		width: 450px;
+	}
+	body .schedule {
+		width: 450px;
+	}
+	body .logo {
+		height: 360px;
+		width: 450px;
+		margin: 0 auto;
+		margin-top: 15px;
+		background-image: url('../assets/logo.jpg');
+		background-size: cover;
+		display: table;
+	}
+	.standings {
+		height: 300px;
+		width: 450px;
+	}
+}

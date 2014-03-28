@@ -1,0 +1,21 @@
+<div class='homelogo'>
+	<div class='logo'>
+	</div>
+</div>
+
+<div class="bios">
+
+
+	<div class="pagetitle">
+		<h1>Player Bios</h1>
+	</div>
+
+	<% @teams.each do |team| %>
+		<h2><%= team.name %></h2>
+		<% team.players.each do |player| %>
+			<h3><%= player.name %></h3>
+			<p><%= player.bio %></p>
+		<% end %>
+	<% end %>
+
+</div>
