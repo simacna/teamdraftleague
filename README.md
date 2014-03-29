@@ -13,3 +13,6 @@ TDL was developed with:
 * Pry v0.9.12.6
 * Bcrypt v3.1.7
 * Pg v0.17.1
+
+### User Stories
+* [Pivital Tracker](https://www.pivotaltracker.com/s/projects/1046566)
