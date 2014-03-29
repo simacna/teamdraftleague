@@ -6,6 +6,7 @@ TeamdraftleagueApp::Application.routes.draw do
   root 'welcome#index'
 
   resources :players
+  resources :teams
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
