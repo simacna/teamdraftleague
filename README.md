@@ -15,4 +15,4 @@ TDL was developed with:
 * Pg v0.17.1
 
 ### User Stories
-* [Pivital Tracker](https://www.pivotaltracker.com/s/projects/1046566)
+* [Pivotal Tracker](https://www.pivotaltracker.com/s/projects/1046566)
