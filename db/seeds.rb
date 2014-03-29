@@ -14,6 +14,7 @@ Season.delete_all
 
 
 j_chan = Team.create(name: "J-Chan All-Stars")
+j_chan.set_challonge_team_number
 
 hugh_kramer = Player.create(name: "Hugh Kramer", bio: "Hugh Kramer is just a dude. A dude who loves magical gatherings. He does not claim to know the secrets of the universe though he does claim to have been the beat-boxing champion of his high school. A lover of all things limited and most things Lotus Cobra, when it comes to drafting, Hugh Kramer, like the Wu-Tang Clan and Kadar's farts, ain't nothing to F with.")
 
@@ -30,6 +31,7 @@ j_chan.players << jon_sieber
 j_chan.players << alex_owen
 
 scryducks = Team.create(name: "ScryDucks")
+scryducks.set_challonge_team_number
 
 matt_jones = Player.create(name: "Matt Jones", bio: "Matt Jones is a sometimes PWP grinder, all the time spell slinger, and one passionate dude. He started playing at the end of Revised and quit at Exodus. Upon sobriety and running out of self-help groups to join, Jones picked Magic back up at New Phyrexia, found his favorite non-Necropotence card, Phyrexian Obliterator, and earned himself a nickname. He loves Constructed and tolerates Limited. With Hugh Kramer, Jones founded Team Draft League in 2014 as a way to curate draft groups, get better at Limited Magic in a healthy, and deepen our relationship with the local Magic community.")
 
@@ -46,6 +48,7 @@ scryducks.players << kadar_brock
 scryducks.players << nick_forker
 
 cackasaurus = Team.create(name: "Cackasaurus")
+cackasaurus.set_challonge_team_number
 
 dan_black = Player.create(name: "Dan Black", bio: "I'm just a guy who is interested in being successful with my mana, draws, and planes walker points. Recently things have been taking off for me, I've got a good draft run at a well-known very profitable location, my cards have started targeting exponentially, and I'm working on a web startup of my own to help people's snap keeps. The only thing I've neglected is my sanctioned play, but there's only so much time! I'm silly and insightful, but I'm also nerdy and down-to-earth. I'm very patient but I know when to cut through things and just attack. I keep it together under pressure because I usually see things coming before they happen.")
 
@@ -58,6 +61,7 @@ cackasaurus.players << dan_garfield
 cackasaurus.players << austin_k
 
 jung_gunz = Team.create(name: "Jung Gunz")
+jung_gunz.set_challonge_team_number
 
 zach_barash = Player.create(name: "Zach Barash", bio: "Zach discovered Magic in the summer of '94 and was immediately hooked when he received a booster of Revised for his birthday. He left the game briefly during Urza's block, then missed everything between Prophecy and Magic 2011 (though he did boot up Shandalar every year). Zach is an avid Limited player and proud cube owner. He performs musical improv every week with his team, Petting Zoo, if you're into that sort of stuff (which is awesome!).")
 
@@ -72,6 +76,7 @@ jung_gunz.players << nick_heppding
 jung_gunz.players << richard_tan
 
 loam = Team.create(name: "Life from the LOaM")
+loam.set_challonge_team_number
 
 monique_garraud = Player.create(name: "Monique Garraud", bio: "Monique recently stumbled upon Magic: The Gathering while attending board game night at her local game store. This Brooklyn-based biotech research analyst knew she'd be hooked once she saw the excitement of the players and complexity of their games. Innistrad was her first set and after about a month she had already played in her first Pro Tour Qualifier. She currently plays in about four competitive REL events monthly and thoroughly enjoys traveling to Tri-State PTQs and as well as Grand Prix all over the country. Be sure to say hello when you see her at your next tournament!")
 
@@ -86,6 +91,7 @@ loam.players << orlando_santiago
 loam.players << anthony_lebron
 
 clockwerk_beats = Team.create(name: "The Clockwerk Beats")
+clockwerk_beats.set_challonge_team_number
 
 hunter_slaton = Player.create(name: "Hunter \"Rolex\" Slaton", bio: "Hunter Slaton first picked up Magic when he was a kid, around the time of Revised and Fallen Empires, alongside his best friend at the time. Both of our sets of parents made it a condition of our playing that we throw away all the black cards immediately upon opening them, because of Jesus. Hunter didn't play again until Dissension, when he found an awesome playgroup through Craigslist, which used to play at a deli near the Chrysler Building. Hunter pretty much exclusively plays Limited, aka God's Format. He has a four-digit DCI number, and lives five minutes' walk from the 20 Sided Store in Williamsburg, Brooklyn.")
 
@@ -98,6 +104,7 @@ clockwerk_beats.players << david_mccoy
 clockwerk_beats.players << brendan_mcnamara
 
 team_handsome = Team.create(name: "Team Handsome")
+team_handsome.set_challonge_team_number
 
 
 dom_neitz = Player.create(name: "Dom Neitz", bio: "It's impossible to know which is greater: the number of people currently lost in a daydream about Dom or about his cat.")
@@ -111,6 +118,7 @@ team_handsome.players << sean_morse
 team_handsome.players << derek_gallen
 
 abeysitters = Team.create(name: "Abeysitters")
+abeysitters.set_challonge_team_number
 
 dylan_heister = Player.create(name: "Dylan Heister", bio: "Dylan Hiester spends his time surrounded by a need, an urge, an unending desire to shuffle and snap cards rapidly and annoyingly between his fingers. This desire led him to magic the gathering at the tender age of... whatever age first graders are. He remember the joy of casting nightmare and verdant force as a wee lad. He remembers in standard casting a turn two Grim Monolith into turn three Sneak Attack, activate - Crater Hellion, activate - Serra Avatar swing for lethal. He loves resolving things early (if you know what I mean) like turn two planeswalkers or Sun Titan off of Black Lotus, return Lotus then cast Lilliana, of the Veil. He left competitive play in high school and returned for the Alara block. Turn two Woolly Thoctar. Amirite?!?! He has enjoyed watching Twenty sided store and its inhabitants grow as magic players, a store and other kinds of things. He is proud to be a member of team The Abey Sitters.")
 
