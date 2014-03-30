@@ -5,8 +5,8 @@ class Team < ActiveRecord::Base
 
 	# gets the challonge team id and adds it to the teams table
 	def set_challonge_team_number
-
-		teams = HTTParty.get("https://api.challonge.com/v1/tournaments/iy7fpc0t.json?include_participants=1", :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
+		season = self.season.challonge_name
+		teams = HTTParty.get("https://api.challonge.com/v1/tournaments/#{season}.json?include_participants=1", :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
 		teams['tournament']['participants'].each do |x|
 			if x["participant"]["name"] == self.name
 				self.challonge_team_number = x["participant"]["id"]
