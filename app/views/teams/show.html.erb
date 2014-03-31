@@ -1,1 +1,11 @@
-<h2><%= @team.name %></h2>
+<div class="teams">
+	<div class="pagetitle">
+		<h1><%= @team.name %></h1>
+	</div>
+
+	<div>
+		<% @members.each do |member| %>
+			<p><%= member.name %></p>
+		<% end %>
+	</div>
+</div>

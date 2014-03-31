@@ -1,6 +1,12 @@
-<h2>Teams</h2>
+<div class="teams">
 
-<!-- Iterates over each team and lists its name -->
-<% @teams.each do |team| %>
-	<p><a href="/teams/<%= team.id %>"><%= team.name %></a></p>
-<% end %>
+	<div class="pagetitle">
+		<h1>Teams</h1>
+	</div>
+
+	<!-- Iterates over each team and lists its name -->
+	<% @teams.each do |team| %>
+		<p><a href="/teams/<%= team.id %>"><%= team.name %></a></p>
+	<% end %>
+
+</div>
