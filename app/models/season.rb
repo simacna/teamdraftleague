@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: seasons
+#
+#  id             :integer          not null, primary key
+#  number         :integer
+#  challonge_name :string(255)
+#
+
 class Season < ActiveRecord::Base
 	has_many :matches
 	has_many :teams

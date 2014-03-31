@@ -47,6 +47,8 @@ gem 'bcrypt', '~> 3.1.7'
 group :development do
 	gem "pry-rails"
 	gem 'httparty'
+	gem 'annotate'
+	gem 'rails-erd'
 end
 
 group :development, :test do

@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: teams
+#
+#  id                    :integer          not null, primary key
+#  name                  :string(255)
+#  season_id             :integer
+#  challonge_team_number :integer
+#
+
 class Team < ActiveRecord::Base
 	has_many :players
 	belongs_to :season
