@@ -5,11 +5,11 @@
 
 <div class="bios">
 
-
 	<div class="pagetitle">
 		<h1>Player Bios</h1>
 	</div>
 
+	<!-- Iterates over each team and displays the team name, player names, and player bios -->
 	<% @teams.each do |team| %>
 		<h2><%= team.name %></h2>
 		<% team.players.each do |player| %>

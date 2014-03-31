@@ -32,9 +32,9 @@ a {
 	padding-top: 5px;
 }
 .schedule {
-	width: 650px;
-	float: right;
-	display: block;
+	width: 450px;
+	margin: 0 auto;
+	display: table;
 	padding-top: 50px;
 }
 .logo {
@@ -61,15 +61,15 @@ a {
 	display: table;
 	font-family: Old Standard TT;
 }
-.bios h1 {
+.bios h1, .schedule h1 {
 	text-align: center;
 	font-family: Lato, sans-serif;
 }
-.bios h2 {
+.bios h2, .schedule h2 {
 	text-align: center;
 	font-family: Lato, sans-serif;
 }
-.bios h3 {
+.bios h3, .schedule h3 {
 	text-align: center;
 	font-family: Lato, sans-serif;
 }
