@@ -53,7 +53,7 @@ a {
 	padding-top: 50px;
 	display: table;
 }
-.bios, .teams {
+.bios, .teams, .players {
 	width: 450px;
 	text-align: justify;
 	margin: 0 auto;
@@ -61,15 +61,15 @@ a {
 	display: table;
 	font-family: Old Standard TT;
 }
-.bios h1, .schedule h1, .teams h1 {
+.bios h1, .schedule h1, .teams h1, .players h1 {
 	text-align: center;
 	font-family: Lato, sans-serif;
 }
-.bios h2, .schedule h2, .teams  h2 {
+.bios h2, .schedule h2, .teams h2, .players h2 {
 	text-align: center;
 	font-family: Lato, sans-serif;
 }
-.bios h3, .schedule h3, .teams h3 {
+.bios h3, .schedule h3, .teams h3, .players h3 {
 	text-align: center;
 	font-family: Lato, sans-serif;
 }
@@ -77,6 +77,10 @@ a {
 	border-bottom: 1px solid rgb(70,70,90);
 	line-height: 40px;
 	margin-bottom: 50px;
+}
+
+#edit_player {
+	text-align: right;
 }
 
 /* Table Styling */

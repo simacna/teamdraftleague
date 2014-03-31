@@ -8,8 +8,9 @@
 	<% @teams.each do |team| %>
 		<h2><%= team.name %></h2>
 		<% team.players.each do |player| %>
-			<h3><%= player.name %></h3>
+			<a href="/players/<%= player.id %>"><h3><%= player.name %></h3></a>
 			<p><%= player.bio %></p>
+			<a href="/players/<%= player.id %>/edit">Edit</a>
 		<% end %>
 	<% end %>
 

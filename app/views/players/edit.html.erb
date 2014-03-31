@@ -1,0 +1,36 @@
+<div class="players">
+	<div class="pagetitle">
+		<h1>Edit Player</h1>
+	</div>
+	<div>
+		<h2><%= @player.name %></h2>
+		<%= form_for @player do |f| %>
+			<%= f.hidden_field(:id) %>
+			<p>
+				<%= f.label(:name) %>:
+				<%= f.text_field(:name) %>
+			</p>
+			<p>
+				<%= f.label(:email) %>:
+				<%= f.text_field(:email) %>
+			</p>
+			<p>
+				<%= f.label(:password) %>:
+				<%= f.password_field(:password) %>
+			</p>
+			<p>
+				<%= f.label(:password_confirmation) %>:
+				<%= f.password_field(:password_confirmation) %>
+			</p>	
+			<p>
+				<%= f.label(:admin) %>:
+				<%= f.text_field(:admin) %>
+			</p>
+			<p>
+				<%= f.submit("Edit Player") %>
+			</p>
+		<% end %>
+	</div>
+</div>
+
+
