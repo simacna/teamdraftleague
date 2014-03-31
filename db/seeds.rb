@@ -90,7 +90,7 @@ loam.players << monique_garraud
 loam.players << orlando_santiago 
 loam.players << anthony_lebron
 
-clockwerk_beats = Team.create(name: "The Clockwerk Beats")
+clockwerk_beats = Team.create(name: "Clockwerk Beats")
 
 hunter_slaton = Player.create(name: "Hunter \"Rolex\" Slaton", bio: "Hunter Slaton first picked up Magic when he was a kid, around the time of Revised and Fallen Empires, alongside his best friend at the time. Both of our sets of parents made it a condition of our playing that we throw away all the black cards immediately upon opening them, because of Jesus. Hunter didn't play again until Dissension, when he found an awesome playgroup through Craigslist, which used to play at a deli near the Chrysler Building. Hunter pretty much exclusively plays Limited, aka God's Format. He has a four-digit DCI number, and lives five minutes' walk from the 20 Sided Store in Williamsburg, Brooklyn.")
 
@@ -128,7 +128,7 @@ abeysitters.players << dylan_heister
 abeysitters.players << abe_lusk 
 abeysitters.players << jonathan_pena
 
-season1 = Season.create(number: 1, challonge_name: "iy7fpc0t")
+season1 = Season.create(number: 1, challonge_name: "iy7fpc0t", num_weeks: 7, num_teams: 8)
 season1.teams << j_chan
 season1.teams << scryducks
 season1.teams << cackasaurus
@@ -146,6 +146,5 @@ loam.set_challonge_team_number
 clockwerk_beats.set_challonge_team_number
 team_handsome.set_challonge_team_number
 abeysitters.set_challonge_team_number
-
 
 season1.create_matches

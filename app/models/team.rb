@@ -9,9 +9,9 @@
 #
 
 class Team < ActiveRecord::Base
-	has_many :players
+	has_many :players, :dependent => :destroy
 	belongs_to :season
-	has_many :matches, through: :season
+	has_many :matches, :through => :season
 
 	# gets the challonge team id and adds it to the teams table
 	def set_challonge_team_number
@@ -20,6 +20,7 @@ class Team < ActiveRecord::Base
 		teams['tournament']['participants'].each do |x|
 			if x["participant"]["name"] == self.name
 				self.challonge_team_number = x["participant"]["id"]
+				self.save
 			end
 		end
 

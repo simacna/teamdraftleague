@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329231032) do
+ActiveRecord::Schema.define(version: 20140331165155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20140329231032) do
     t.integer "challonge_match_number"
     t.text    "challonge_match_csv"
     t.integer "challonge_week"
+    t.integer "team_challonge_number"
+    t.integer "challenger_challonge_number"
   end
 
   create_table "players", force: true do |t|
@@ -35,6 +37,8 @@ ActiveRecord::Schema.define(version: 20140329231032) do
   create_table "seasons", force: true do |t|
     t.integer "number"
     t.string  "challonge_name"
+    t.integer "num_weeks"
+    t.integer "num_teams"
   end
 
   create_table "teams", force: true do |t|
