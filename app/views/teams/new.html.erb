@@ -1,0 +1,22 @@
+<div class="bios">
+
+	<div class="pagetitle">
+		<h1>Create New Team</h1>
+	</div>
+
+	<div>
+		<%= form_for Team.new do |f| %>
+			<p>
+				<%= f.label(:name) %>:
+				<%= f.text_field(:name) %>
+			</p>
+			<p>
+				<%= f.label(:season) %>:
+				<%= f.collection_select(:season, @seasons, :id, :number) %>
+			</p>
+			<p>
+				<%= f.submit("Create Team") %>
+			</p>
+		<% end %>
+	</div>
+</div>

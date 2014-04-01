@@ -31,6 +31,8 @@ class SeasonsController < ApplicationController
 				redirect_to("/seasons/new")
 			end
 		else
+			flash[:error] = "Something went wrong! #{response.message}"
+				redirect_to("/seasons/new")
 		end
 	end
 
