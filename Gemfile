@@ -35,6 +35,9 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# HTTParty for HTTP requests
+gem 'httparty'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -46,7 +49,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :development do
 	gem "pry-rails"
-	gem 'httparty'
 	gem 'annotate'
 	gem 'rails-erd'
 end
