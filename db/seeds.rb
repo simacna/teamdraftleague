@@ -31,7 +31,7 @@ j_chan.players << hugh_kramer
 j_chan.players << jon_sieber 
 j_chan.players << alex_owen
 
-puts "J-Chan and players created."
+puts "J-Chan (#{j_chan.name}) and players (#{j_chan.players}) created."
 
 scryducks = Team.create(name: "ScryDucks")
 
@@ -50,7 +50,7 @@ scryducks.players << matt_jones
 scryducks.players << kadar_brock 
 scryducks.players << nick_forker
 
-puts "ScryDucks and players created."
+puts "ScryDucks (#{scryducks.name} and players (#{scryducks.players}) created."
 
 cackasaurus = Team.create(name: "Cackasaurus")
 
@@ -65,7 +65,7 @@ cackasaurus.players << dan_black
 cackasaurus.players << dan_garfield 
 cackasaurus.players << austin_k
 
-puts "Cackasaurus and players created."
+puts "Cackasaurus (#{cackasaurus.name}) and players (#{cackasaurus.players}) created."
 
 jung_gunz = Team.create(name: "Jung Gunz")
 
@@ -82,7 +82,7 @@ jung_gunz.players << zach_barash
 jung_gunz.players << nick_heppding 
 jung_gunz.players << richard_tan
 
-puts "JungGunz and players created."
+puts "JungGunz (#{loam.name}) and players (#{loam.players}) created."
 
 loam = Team.create(name: "Life from the LOaM")
 
@@ -99,7 +99,7 @@ loam.players << monique_garraud
 loam.players << orlando_santiago 
 loam.players << anthony_lebron
 
-puts "LOaM and players created."
+puts "LOaM (#{loam.name}) and players (#{loam.players}) created."
 
 clockwerk_beats = Team.create(name: "Clockwerk Beats")
 
@@ -113,7 +113,7 @@ clockwerk_beats.players << hunter_slaton
 clockwerk_beats.players << david_mccoy 
 clockwerk_beats.players << brendan_mcnamara
 
-puts "Clockwerk and players created."
+puts "Clockwerk (#{clockwerk_beats.name}) and players (#{clockwerk_beats.players}) created."
 
 team_handsome = Team.create(name: "Team Handsome")
 
@@ -128,7 +128,7 @@ team_handsome.players << dom_neitz
 team_handsome.players << sean_morse 
 team_handsome.players << derek_gallen
 
-puts "Team Handsome and players created."
+puts "Team Handsome (#{team_handsome.name}) and players (#{abeysitters.players}) created."
 
 abeysitters = Team.create(name: "Abeysitters")
 
@@ -143,48 +143,57 @@ abeysitters.players << dylan_heister
 abeysitters.players << abe_lusk 
 abeysitters.players << jonathan_pena
 
-puts "Abeysitters and players created."
+puts "Abeysitters (#{abeysitters.name}) and players #{abeysitters.players} created."
 
 season1 = Season.create(number: 1, challonge_name: "iy7fpc0t", num_weeks: 7, num_teams: 8)
+season1.save
 
 puts "Season 1 created."
 
 season1.teams << j_chan
+puts "j_chan season #{j_chan.season} added."
 season1.teams << scryducks
+puts "scryducks season #{scryducks.season} added."
 season1.teams << cackasaurus
+puts "cackasaurus season #{cackasaurus.season} added."
 season1.teams << clockwerk_beats
+puts "clockwerk_beats season #{clockwerk_beats.season} added."
 season1.teams << jung_gunz
+puts "jung_gunz season #{jung_gunz.season} added."
 season1.teams << team_handsome
+puts "team_handsome season #{team_handsome.season} added."
 season1.teams << abeysitters
+puts "abeysitters season #{abeysitters.season} added."
 season1.teams << loam
+puts "loam season #{loam.season} added."
 season1.save
 
 puts "Teams added to Season 1."
 
 j_chan.set_challonge_team_number
 j_chan.save
-puts j_chan
+puts "j_chan saved."
 scryducks.set_challonge_team_number
 scryducks.save
-puts scryducks
+puts "scryducks saved."
 cackasaurus.set_challonge_team_number
 cackasaurus.save
-puts cackasaurus
+puts "cackasaurus saved."
 jung_gunz.set_challonge_team_number
 jung_gunz.save
-puts jung_gunz
+puts "jung_gunz saved."
 loam.set_challonge_team_number
 loam.save
-puts loam
+puts "loam saved."
 clockwerk_beats.set_challonge_team_number
 clockwerk_beats.save
-puts clockwerk_beats
+puts "clockwerk_beats saved."
 team_handsome.set_challonge_team_number
 team_handsome.save
-puts team_handsome
+puts "team_handsome saved."
 abeysitters.set_challonge_team_number
 abeysitters.save
-puts abeysitters
+puts "abeysitters saved."
 
 puts "Challonge team numbers added."
 
