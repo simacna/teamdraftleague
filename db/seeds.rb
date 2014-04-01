@@ -161,14 +161,22 @@ season1.save
 
 puts "Teams added to Season 1."
 
-j_chan.set_challonge_team_number
-scryducks.set_challonge_team_number
-cackasaurus.set_challonge_team_number
-jung_gunz.set_challonge_team_number
-loam.set_challonge_team_number
-clockwerk_beats.set_challonge_team_number
-team_handsome.set_challonge_team_number
-abeysitters.set_challonge_team_number
+j_chan.set_challonge_team_number.save
+puts j_chan
+scryducks.set_challonge_team_number.save
+puts scryducks
+cackasaurus.set_challonge_team_number.save
+puts cackasaurus
+jung_gunz.set_challonge_team_number.save
+puts jung_gunz
+loam.set_challonge_team_number.save
+puts loam
+clockwerk_beats.set_challonge_team_number.save
+puts clockwerk_beats
+team_handsome.set_challonge_team_number.save
+puts team_handsome
+abeysitters.set_challonge_team_number.save
+puts abeysitters
 
 puts "Challonge team numbers added."
 
