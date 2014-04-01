@@ -19,7 +19,6 @@ class TeamsController < ApplicationController
 		challonge_season = Season.find(season_id)
 		challonge_season_name = challonge_season.challonge_name
 		
-
 		response = HTTParty.post("https://api.challonge.com/v1/tournaments/#{challonge_season_name}/participants.json", :query => {:participant => {:name => "#{name}"}}, :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
 
 		challonge_team_number = response["participant"]["id"]

@@ -27,6 +27,8 @@ jon_sieber = Player.create(name: "Jon Sieber", bio: "The only notable thing Jon 
 
 alex_owen = Player.create(name: "Alex Owen", bio: "Alex Owen is a southern boy with eyes that were made to get lost in. His hobbies include Magic: The Gathering, working out, and working it. He never really started playing Magic and he probably will never really stop. Alex is known within the magic community for his catch phrases which he will seemingly exclaim at random during public matches. Phrases such as \"ay papi! Si, mas rapido!\" and of course the classic Michael Jackson \"Shi-Shi-mongggga!\" are beloved by all. BELOVED BY ALL. A modest accounting professional by day and a shark of trades by night, Alex remains a mystery, yet to be unraveled, and like Pandora's box, you may not want to know the truth but can't stop yourself from finding out.")
 
+hugh_kramer.save!
+
 j_chan.players << hugh_kramer 
 j_chan.players << jon_sieber 
 j_chan.players << alex_owen
@@ -125,7 +127,7 @@ clockwerk_beats = Team.create(name: "Clockwerk Beats")
 
 hunter_slaton = Player.create(name: "Hunter \"Rolex\" Slaton", bio: "Hunter Slaton first picked up Magic when he was a kid, around the time of Revised and Fallen Empires, alongside his best friend at the time. Both of our sets of parents made it a condition of our playing that we throw away all the black cards immediately upon opening them, because of Jesus. Hunter didn't play again until Dissension, when he found an awesome playgroup through Craigslist, which used to play at a deli near the Chrysler Building. Hunter pretty much exclusively plays Limited, aka God's Format. He has a four-digit DCI number, and lives five minutes' walk from the 20 Sided Store in Williamsburg, Brooklyn.")
 
-david_mccoy = Player.create(name: "David \"Bones\" McCoy", bio: "David is a robot with a heart of G/W. Spikey but unwilling to grind, he has found a happy medium by drafting with friends. Like most \"people,\" he played for a few months as a kid, took a decade and a half off to \"grow up,\" and only recently came back to the game.", admin: true)
+david_mccoy = Player.create(name: "David \"Bones\" McCoy", bio: "David is a robot with a heart of G/W. Spikey but unwilling to grind, he has found a happy medium by drafting with friends. Like most \"people,\" he played for a few months as a kid, took a decade and a half off to \"grow up,\" and only recently came back to the game.")
 
 brendan_mcnamara = Player.create(name: "Brendan \"B-Mac\" McNamara", bio: "Brendan attended the Grinder Academy of Athreos where he earned three Distinguished Scholar commendations. Rumors abound, however, that he is actually a Dimir agent, infiltrating the black-white school to learn how to survive while milling his opponents to death. His friends know him as the Irish Lady Gaga, which is kind of weird. He must have some strange friends.")
 
@@ -204,28 +206,54 @@ season1.save
 puts "Teams added to Season 1."
 
 j_chan.set_challonge_team_number
-j_chan.save
-puts "j_chan saved."
+j_chan.save!
+puts j_chan.name
+puts j_chan.season_id
+puts j_chan.challonge_team_number
+puts j_chan.inspect
+j_chan_re = Team.find_by(name: "J-Chan All-Stars")
+puts j_chan_re.inspect
 scryducks.set_challonge_team_number
 scryducks.save
+puts scryducks.name
+puts scryducks.season_id
+puts scryducks.challonge_team_number
 puts "scryducks saved."
 cackasaurus.set_challonge_team_number
 cackasaurus.save
+puts cackasaurus.name
+puts cackasaurus.season_id
+puts cackasaurus.challonge_team_number
 puts "cackasaurus saved."
 jung_gunz.set_challonge_team_number
 jung_gunz.save
+puts jung_gunz.name
+puts jung_gunz.season_id
+puts jung_gunz.challonge_team_number
 puts "jung_gunz saved."
 loam.set_challonge_team_number
 loam.save
+puts loam.name
+puts loam.season_id
+puts loam.challonge_team_number
 puts "loam saved."
 clockwerk_beats.set_challonge_team_number
 clockwerk_beats.save
+puts clockwerk_beats.name
+puts clockwerk_beats.season_id
+puts clockwerk_beats.challonge_team_number
 puts "clockwerk_beats saved."
 team_handsome.set_challonge_team_number
 team_handsome.save
+puts team_handsome.name
+puts team_handsome.season_id
+puts team_handsome.challonge_team_number
 puts "team_handsome saved."
 abeysitters.set_challonge_team_number
 abeysitters.save
+puts abeysitters.name
+puts abeysitters.season_id
+puts abeysitters.challonge_team_number
 puts "abeysitters saved."
 
 puts "Challonge team numbers added."
@@ -233,3 +261,5 @@ puts "Challonge team numbers added."
 season1.create_matches
 
 puts "Season 1 matches created."
+
+admin = User.new(name: "David McCoy", password: "password", email: "david.mccoy@gmail.com", admin: true)

@@ -9,6 +9,6 @@
 #
 
 class Player < ActiveRecord::Base
-	has_secure_password
 	belongs_to :team
+	belongs_to :user
 end

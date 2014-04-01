@@ -20,9 +20,11 @@ class Team < ActiveRecord::Base
 
 		teams = HTTParty.get("https://api.challonge.com/v1/tournaments/#{season}.json?include_participants=1", :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
 		
-		teams['tournament']['participants'].each do |x|
-			if x["participant"]["name"] == self.name
-				self.challonge_team_number = x["participant"]["id"]
+		teamz = teams['tournament']['participants']
+
+		teamz.each do |team|
+			if team["participant"]["name"] == self.name
+				self.challonge_team_number = team["participant"]["id"]
 				self.save
 			end
 		end

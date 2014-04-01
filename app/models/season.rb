@@ -27,11 +27,13 @@ class Season < ActiveRecord::Base
 			puts "Match created."
 			x.team_challonge_number = match["match"]["player1_id"]
 			puts "Team challonge number set."
-			x.team_id = Team.find_by(challonge_team_number: match["match"]["player1_id"]).id
+			team1 = Team.find_by(challonge_team_number: match["match"]["player1_id"])
+			x.team_id = team1.id
 			puts "Team_id set."
 			x.challenger_challonge_number = match["match"]["player2_id"]
 			puts "Challenger challonge number set."
-			x.challenger_id = Team.find_by(challonge_team_number: match["match"]["player2_id"]).id
+			team2 = Team.find_by(challonge_team_number: match["match"]["player2_id"])
+			x.challenger_id = team2.id
 			puts "Challenger_id set."
 			x.season_id = self.id
 			puts "Season_id set."
