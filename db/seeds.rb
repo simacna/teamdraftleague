@@ -32,7 +32,7 @@ j_chan.players << jon_sieber
 j_chan.players << alex_owen
 
 j_chan_players = j_chan.players.each do |player|
-					puts player.name
+					return player.name
 				end
 
 puts "J-Chan (#{j_chan.name}) and players (#{j_chan_players}) created."
@@ -55,7 +55,7 @@ scryducks.players << kadar_brock
 scryducks.players << nick_forker
 
 scryducks_players = scryducks.players.each do |player|
-						puts player.name
+						return player.name
 					end
 
 puts "ScryDucks (#{scryducks.name} and players (#{scryducks_players}) created."
@@ -73,7 +73,11 @@ cackasaurus.players << dan_black
 cackasaurus.players << dan_garfield 
 cackasaurus.players << austin_k
 
-puts "Cackasaurus (#{cackasaurus.name}) and players (#{cackasaurus.players}) created."
+cackasaurus_players = cackasaurus.players.each do |player|
+						return player.name
+					end
+
+puts "Cackasaurus (#{cackasaurus.name}) and players (#{cackasaurus_players}) created."
 
 jung_gunz = Team.create(name: "Jung Gunz")
 
@@ -90,7 +94,11 @@ jung_gunz.players << zach_barash
 jung_gunz.players << nick_heppding 
 jung_gunz.players << richard_tan
 
-puts "JungGunz (#{jung_gunz.name}) and players (#{jung_gunz.players}) created."
+jung_gunz_players = jung_gunz.players.each do |player|
+						return player.name
+					end
+
+puts "JungGunz (#{jung_gunz.name}) and players (#{jung_gunz_players}) created."
 
 loam = Team.create(name: "Life from the LOaM")
 
@@ -107,7 +115,11 @@ loam.players << monique_garraud
 loam.players << orlando_santiago 
 loam.players << anthony_lebron
 
-puts "LOaM (#{loam.name}) and players (#{loam.players}) created."
+loam_players = loam.players.each do |player|
+						return player.name
+					end
+
+puts "LOaM (#{loam.name}) and players (#{loam_players}) created."
 
 clockwerk_beats = Team.create(name: "Clockwerk Beats")
 
@@ -121,7 +133,11 @@ clockwerk_beats.players << hunter_slaton
 clockwerk_beats.players << david_mccoy 
 clockwerk_beats.players << brendan_mcnamara
 
-puts "Clockwerk (#{clockwerk_beats.name}) and players (#{clockwerk_beats.players}) created."
+clockwerk_beats_players = clockwerk_beats.players.each do |player|
+							return player.name
+						end
+
+puts "Clockwerk (#{clockwerk_beats.name}) and players (#{clockwerk_beats_players}) created."
 
 team_handsome = Team.create(name: "Team Handsome")
 
@@ -136,7 +152,11 @@ team_handsome.players << dom_neitz
 team_handsome.players << sean_morse 
 team_handsome.players << derek_gallen
 
-puts "Team Handsome (#{team_handsome.name}) and players (#{team_handsome.players}) created."
+team_handsome_players = team_handsome.players.each do |player|
+							return player.name
+						end
+
+puts "Team Handsome (#{team_handsome.name}) and players (#{team_handsome_players}) created."
 
 abeysitters = Team.create(name: "Abeysitters")
 
@@ -151,7 +171,12 @@ abeysitters.players << dylan_heister
 abeysitters.players << abe_lusk 
 abeysitters.players << jonathan_pena
 
-puts "Abeysitters (#{abeysitters.name}) and players #{abeysitters.players} created."
+abeysitters_players = abeysitters.players.each do |player|
+							return player.name
+						end
+
+
+puts "Abeysitters (#{abeysitters.name}) and players #{abeysitters_players} created."
 
 season1 = Season.create(number: 1, challonge_name: "iy7fpc0t", num_weeks: 7, num_teams: 8)
 season1.save
