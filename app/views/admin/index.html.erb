@@ -6,14 +6,11 @@
 
 	<div>
 
-		<% if @response.code == 422 %>
-			<%= @response %>
-		<% end %>
-
-		<p>Add Season</p>
-		<!-- number, challonge_name, num_teams, num_weeks  -->
+		<a href="/seasons/new"><p>Add Season</p></a>
+		<!-- number, challonge_name, type, url -->
 		<p>Delete Season</p>
 		<p>Start Season</p>
+		<!-- num_teams, num_weeks  -->
 		<p>Schedule Matches</p>
 
 		<p>Add Team</p>

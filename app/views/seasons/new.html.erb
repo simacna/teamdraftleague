@@ -1,0 +1,30 @@
+<div class="bios">
+
+	<div class="pagetitle">
+		<h1>Create Season</h1>
+	</div>
+
+	<div>
+		<%= form_for Season.new do |f| %>
+			<p>
+				<%= f.label(:number) %>:
+				<%= f.text_field(:number) %>
+			</p>
+			<p>
+				<%= f.label(:challonge_name) %>:
+				<%= f.text_field(:challonge_name) %>
+			</p>
+			<p>
+				<%= label_tag(:challonge_url, "Challonge URL") %>:
+				<%= text_field_tag(:challonge_url) %>
+			</p>
+			<p>
+				<%= label_tag(:type, "Tournament type") %>:
+				<%= text_field_tag(:type) %>
+			</p>
+			<p>
+				<%= f.submit("Create Season") %>
+			</p>
+		<% end %>
+	</div>
+</div>
