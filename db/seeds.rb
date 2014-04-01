@@ -3,6 +3,7 @@ Team.delete_all
 Match.delete_all
 Season.delete_all
 
+puts "Deleted all entries."
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -30,6 +31,8 @@ j_chan.players << hugh_kramer
 j_chan.players << jon_sieber 
 j_chan.players << alex_owen
 
+puts "J-Chan and players created."
+
 scryducks = Team.create(name: "ScryDucks")
 
 
@@ -47,6 +50,8 @@ scryducks.players << matt_jones
 scryducks.players << kadar_brock 
 scryducks.players << nick_forker
 
+puts "ScryDucks and players created."
+
 cackasaurus = Team.create(name: "Cackasaurus")
 
 
@@ -59,6 +64,8 @@ austin_k = Player.create(name: "Austin K", bio: "...")
 cackasaurus.players << dan_black 
 cackasaurus.players << dan_garfield 
 cackasaurus.players << austin_k
+
+puts "Cackasaurus and players created."
 
 jung_gunz = Team.create(name: "Jung Gunz")
 
@@ -75,6 +82,8 @@ jung_gunz.players << zach_barash
 jung_gunz.players << nick_heppding 
 jung_gunz.players << richard_tan
 
+puts "JungGunz and players created."
+
 loam = Team.create(name: "Life from the LOaM")
 
 
@@ -90,6 +99,8 @@ loam.players << monique_garraud
 loam.players << orlando_santiago 
 loam.players << anthony_lebron
 
+puts "LOaM and players created."
+
 clockwerk_beats = Team.create(name: "Clockwerk Beats")
 
 hunter_slaton = Player.create(name: "Hunter \"Rolex\" Slaton", bio: "Hunter Slaton first picked up Magic when he was a kid, around the time of Revised and Fallen Empires, alongside his best friend at the time. Both of our sets of parents made it a condition of our playing that we throw away all the black cards immediately upon opening them, because of Jesus. Hunter didn't play again until Dissension, when he found an awesome playgroup through Craigslist, which used to play at a deli near the Chrysler Building. Hunter pretty much exclusively plays Limited, aka God's Format. He has a four-digit DCI number, and lives five minutes' walk from the 20 Sided Store in Williamsburg, Brooklyn.")
@@ -101,6 +112,8 @@ brendan_mcnamara = Player.create(name: "Brendan \"B-Mac\" McNamara", bio: "Brend
 clockwerk_beats.players << hunter_slaton 
 clockwerk_beats.players << david_mccoy 
 clockwerk_beats.players << brendan_mcnamara
+
+puts "Clockwerk and players created."
 
 team_handsome = Team.create(name: "Team Handsome")
 
@@ -115,6 +128,8 @@ team_handsome.players << dom_neitz
 team_handsome.players << sean_morse 
 team_handsome.players << derek_gallen
 
+puts "Team Handsome and players created."
+
 abeysitters = Team.create(name: "Abeysitters")
 
 dylan_heister = Player.create(name: "Dylan Heister", bio: "Dylan Hiester spends his time surrounded by a need, an urge, an unending desire to shuffle and snap cards rapidly and annoyingly between his fingers. This desire led him to magic the gathering at the tender age of... whatever age first graders are. He remember the joy of casting nightmare and verdant force as a wee lad. He remembers in standard casting a turn two Grim Monolith into turn three Sneak Attack, activate - Crater Hellion, activate - Serra Avatar swing for lethal. He loves resolving things early (if you know what I mean) like turn two planeswalkers or Sun Titan off of Black Lotus, return Lotus then cast Lilliana, of the Veil. He left competitive play in high school and returned for the Alara block. Turn two Woolly Thoctar. Amirite?!?! He has enjoyed watching Twenty sided store and its inhabitants grow as magic players, a store and other kinds of things. He is proud to be a member of team The Abey Sitters.")
@@ -128,7 +143,12 @@ abeysitters.players << dylan_heister
 abeysitters.players << abe_lusk 
 abeysitters.players << jonathan_pena
 
+puts "Abeysitters and players created."
+
 season1 = Season.create(number: 1, challonge_name: "iy7fpc0t", num_weeks: 7, num_teams: 8)
+
+puts "Season 1 created."
+
 season1.teams << j_chan
 season1.teams << scryducks
 season1.teams << cackasaurus
@@ -137,6 +157,8 @@ season1.teams << jung_gunz
 season1.teams << team_handsome
 season1.teams << abeysitters
 season1.teams << loam
+
+puts "Teams added to Season 1."
 
 j_chan.set_challonge_team_number
 scryducks.set_challonge_team_number
@@ -147,4 +169,8 @@ clockwerk_beats.set_challonge_team_number
 team_handsome.set_challonge_team_number
 abeysitters.set_challonge_team_number
 
+puts "Challonge team numbers added."
+
 season1.create_matches
+
+puts "Season 1 matches created."
