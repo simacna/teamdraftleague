@@ -4,13 +4,13 @@ class SessionController < ApplicationController
 	end
 
 	def create
-		player = Player.find_by(email: params[:email])
-		if player && player.authenticate(params[:password])
-			session[:player_id] = player.id
-			if player.admin
+		user = User.find_by(email: params[:email])
+		if user && user.authenticate(params[:password])
+			session[:user_id] = user.id
+			if user.admin
 				redirect_to("/admin")
 			else
-				redirect_to("/players/#{player.id}")
+				redirect_to("/users/#{player.id}")
 			end
 		else
 			render :new
