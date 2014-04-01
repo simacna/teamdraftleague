@@ -14,7 +14,7 @@
 
 class Match < ActiveRecord::Base
 	belongs_to :season
-	belongs_to :team, :through => :season
-	belongs_to :challenger, class_name: "Team", foreign_key: "challenger_id", through: :season
+	has_one :team
+	has_one :challenger, class_name: "Team", foreign_key: "challenger_id"
 
 end
