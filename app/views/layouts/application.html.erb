@@ -12,13 +12,23 @@
 <div class="wrap">
 	
 	<div>
-		<a href="/">Home</a> | <a href="/players">Players</a> | <a href="/teams">Teams</a> | <a href="/schedule">Schedule</a>
+		<a href="/">Home</a> | <a href="/players">Players</a> | <a href="/teams">Teams</a> | <a href="/schedule">Schedule</a> | <% if logged_in? %><a href="/players/<%= current_user.id %>"><%= current_user.name %></a> | <a href="/signout">Sign Out</a><% else %><a href="/session/new">Sign In</a><% end %>
 	</div>
 
 	<div class='homelogo'>
 		<div class='logo'>
 		</div>
 	</div>
+
+	<% if flash[:error] %>
+		<div class="error">
+			<%= flash[:error] %>
+		</div>
+	<% elsif flash[:success] %>
+		<div class="success">
+			<%= flash[:success] %>
+		</div>
+	<% end %>
 
 
 	<%= yield %>

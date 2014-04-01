@@ -8,9 +8,14 @@ TeamdraftleagueApp::Application.routes.draw do
   resources :players
   resources :teams
   resources :schedule
+  resources :session
+  resources :admin
+  resources :season
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+
+  get 'signout' => 'session#destroy'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

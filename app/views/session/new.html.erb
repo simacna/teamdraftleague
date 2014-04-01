@@ -1,0 +1,16 @@
+<div class="players">
+
+	<div class="pagetitle">
+		<h1>Sign In</h1>
+	</div>
+		<div>
+			<%= form_tag("/session", action: "create") do %>
+				<%= label_tag(:email) %>
+				<%= text_field_tag(:email) %>
+				<%= label_tag(:password) %>
+				<%= password_field_tag(:password) %>
+				<%= submit_tag("Login") %>
+			<% end %>
+		</div>
+
+</div>

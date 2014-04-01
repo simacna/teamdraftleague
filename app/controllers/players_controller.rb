@@ -27,7 +27,11 @@ class PlayersController < ApplicationController
 								password_confirmation: params["player"]["password_confirmation"],
 								admin: params["player"]["admin"])
 
-		redirect_to("/players")
+		if updated_player.save
+			redirect_to("/players")
+		else
+			render :edit
+		end
 	end
 
 end

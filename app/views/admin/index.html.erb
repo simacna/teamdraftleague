@@ -1,0 +1,33 @@
+<div class="bios">
+
+	<div class="pagetitle">
+		<h1>Admin Panel</h1>
+	</div>
+
+	<div>
+
+		<% if @response.code == 422 %>
+			<%= @response %>
+		<% end %>
+
+		<p>Add Season</p>
+		<!-- number, challonge_name, num_teams, num_weeks  -->
+		<p>Delete Season</p>
+		<p>Start Season</p>
+		<p>Schedule Matches</p>
+
+		<p>Add Team</p>
+		<!-- Name, season_id, challonge_team_name -->
+		<p>Delete Team</p>
+
+		<p>Add User</p>
+		<!-- Add email and password to player, maybe admin -->
+		<p>Delete User</p>
+
+		<p>Add Player</p>
+		<!-- Name, bio // Add to team -->
+		<p>Delete Player</p>
+
+	</div>
+
+</div>
