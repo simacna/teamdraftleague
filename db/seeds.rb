@@ -136,7 +136,7 @@ team_handsome.players << dom_neitz
 team_handsome.players << sean_morse 
 team_handsome.players << derek_gallen
 
-puts "Team Handsome (#{team_handsome.name}) and players (#{abeysitters.players}) created."
+puts "Team Handsome (#{team_handsome.name}) and players (#{team_handsome.players}) created."
 
 abeysitters = Team.create(name: "Abeysitters")
 
