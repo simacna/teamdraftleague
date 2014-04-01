@@ -262,4 +262,5 @@ season1.create_matches
 
 puts "Season 1 matches created."
 
-admin = User.new(name: "David McCoy", password: "password", email: "david.mccoy@gmail.com", admin: true)
+admin = User.new(name: "David McCoy", password: "password", password_confirmation: "password", email: "david.mccoy@gmail.com", admin: true)
+admin.save
