@@ -16,6 +16,8 @@ class Season < ActiveRecord::Base
 		
 		season = self.challonge_name
 
+		binding.pry
+
 		response = HTTParty.get("https://api.challonge.com/v1/tournaments/#{season}.json?include_matches=1", :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
 
 		# Returns an array of all matches

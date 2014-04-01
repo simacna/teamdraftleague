@@ -157,6 +157,7 @@ season1.teams << jung_gunz
 season1.teams << team_handsome
 season1.teams << abeysitters
 season1.teams << loam
+season1.save
 
 puts "Teams added to Season 1."
 
