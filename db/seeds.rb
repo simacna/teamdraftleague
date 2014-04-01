@@ -32,7 +32,7 @@ j_chan.players << jon_sieber
 j_chan.players << alex_owen
 
 j_chan_players = j_chan.players.each do |player|
-					return player.name
+					puts player.name
 				end
 
 puts "J-Chan (#{j_chan.name}) and players (#{j_chan_players}) created."
@@ -55,7 +55,7 @@ scryducks.players << kadar_brock
 scryducks.players << nick_forker
 
 scryducks_players = scryducks.players.each do |player|
-						return player.name
+						puts player.name
 					end
 
 puts "ScryDucks (#{scryducks.name} and players (#{scryducks_players}) created."
@@ -74,7 +74,7 @@ cackasaurus.players << dan_garfield
 cackasaurus.players << austin_k
 
 cackasaurus_players = cackasaurus.players.each do |player|
-						return player.name
+						puts player.name
 					end
 
 puts "Cackasaurus (#{cackasaurus.name}) and players (#{cackasaurus_players}) created."
@@ -95,7 +95,7 @@ jung_gunz.players << nick_heppding
 jung_gunz.players << richard_tan
 
 jung_gunz_players = jung_gunz.players.each do |player|
-						return player.name
+						puts player.name
 					end
 
 puts "JungGunz (#{jung_gunz.name}) and players (#{jung_gunz_players}) created."
@@ -116,7 +116,7 @@ loam.players << orlando_santiago
 loam.players << anthony_lebron
 
 loam_players = loam.players.each do |player|
-						return player.name
+						puts player.name
 					end
 
 puts "LOaM (#{loam.name}) and players (#{loam_players}) created."
@@ -134,7 +134,7 @@ clockwerk_beats.players << david_mccoy
 clockwerk_beats.players << brendan_mcnamara
 
 clockwerk_beats_players = clockwerk_beats.players.each do |player|
-							return player.name
+							puts player.name
 						end
 
 puts "Clockwerk (#{clockwerk_beats.name}) and players (#{clockwerk_beats_players}) created."
@@ -153,7 +153,7 @@ team_handsome.players << sean_morse
 team_handsome.players << derek_gallen
 
 team_handsome_players = team_handsome.players.each do |player|
-							return player.name
+							puts player.name
 						end
 
 puts "Team Handsome (#{team_handsome.name}) and players (#{team_handsome_players}) created."
@@ -172,7 +172,7 @@ abeysitters.players << abe_lusk
 abeysitters.players << jonathan_pena
 
 abeysitters_players = abeysitters.players.each do |player|
-							return player.name
+							puts player.name
 						end
 
 
