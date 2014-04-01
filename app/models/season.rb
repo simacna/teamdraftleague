@@ -14,7 +14,7 @@ class Season < ActiveRecord::Base
 	# Adds scheduled matches to the database assuming the presence of teams and a season that has been started (season.start API request)
 	def create_matches
 		
-		season = self.season.challonge_name
+		season = self.challonge_name
 
 		response = HTTParty.get("https://api.challonge.com/v1/tournaments/#{season}.json?include_matches=1", :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
 
