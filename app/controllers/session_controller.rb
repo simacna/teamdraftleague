@@ -13,6 +13,7 @@ class SessionController < ApplicationController
 				redirect_to("/users/#{player.id}")
 			end
 		else
+			flash[:error] = "Failure to launch."
 			render :new
 		end
 	end
