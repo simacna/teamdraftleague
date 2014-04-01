@@ -31,7 +31,11 @@ j_chan.players << hugh_kramer
 j_chan.players << jon_sieber 
 j_chan.players << alex_owen
 
-puts "J-Chan (#{j_chan.name}) and players (#{j_chan.players}) created."
+j_chan_players = j_chan.players.each do |player|
+					puts player.name
+				end
+
+puts "J-Chan (#{j_chan.name}) and players (#{j_chan_players}) created."
 
 scryducks = Team.create(name: "ScryDucks")
 
@@ -50,7 +54,11 @@ scryducks.players << matt_jones
 scryducks.players << kadar_brock 
 scryducks.players << nick_forker
 
-puts "ScryDucks (#{scryducks.name} and players (#{scryducks.players}) created."
+scryducks_players = scryducks.players.each do |player|
+						puts player.name
+					end
+
+puts "ScryDucks (#{scryducks.name} and players (#{scryducks_players}) created."
 
 cackasaurus = Team.create(name: "Cackasaurus")
 
@@ -82,7 +90,7 @@ jung_gunz.players << zach_barash
 jung_gunz.players << nick_heppding 
 jung_gunz.players << richard_tan
 
-puts "JungGunz (#{loam.name}) and players (#{loam.players}) created."
+puts "JungGunz (#{jung_gunz.name}) and players (#{jung_gunz.players}) created."
 
 loam = Team.create(name: "Life from the LOaM")
 
