@@ -1,0 +1,12 @@
+<div class="teams">
+
+	<div class="pagetitle">
+		<h1>Seasons</h1>
+	</div>
+
+	<!-- Iterates over each team and lists its name -->
+	<% @seasons.each do |season| %>
+		<p><a href="/seasons/<%= season.id %>">Season <%= season.number %></a></p>
+	<% end %>
+
+</div>

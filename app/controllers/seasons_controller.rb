@@ -4,6 +4,10 @@ class SeasonsController < ApplicationController
 		@seasons = Season.all
 	end
 
+	def show
+		@season = Season.find(params["id"])
+	end
+
 	def new
 
 	end
