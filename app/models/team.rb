@@ -13,6 +13,8 @@ class Team < ActiveRecord::Base
 	belongs_to :season
 	has_many :matches, :through => :season
 
+	validates(:name,     { :presence     => true })
+
 	# gets the challonge team id and adds it to the teams table
 	def set_challonge_team_number
 
