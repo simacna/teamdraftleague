@@ -1,0 +1,32 @@
+<div class="players">
+	<div class="pagetitle">
+		<h1>Create New User</h1>
+	</div>
+	<div>
+		<%= form_for User.new do |f| %>
+			<p>
+				<%= f.label(:name) %>:
+				<%= f.text_field(:name) %>
+			</p>
+			<p>
+				<%= f.label(:email) %>:
+				<%= f.text_field(:email) %>
+			</p>
+			<p>
+				<%= f.label(:password) %>:
+				<%= f.password_field(:password) %>
+			</p>
+			<p>
+				<%= f.label(:password_confirmation) %>:
+				<%= f.password_field(:password_confirmation) %>
+			</p>
+			<p>
+				<%= f.label(:player) %>:
+				<%= f.collection_select(:player, @players, :id, :name) %>
+			</p>
+			<p>
+				<%= f.submit("Create Player") %>
+			</p>
+		<% end %>
+	</div>
+</div>

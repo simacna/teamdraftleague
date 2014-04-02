@@ -1,6 +1,6 @@
 <div class="players">
 	<div class="pagetitle">
-		<h1>Add Player</h1>
+		<h1>Create New Player</h1>
 	</div>
 	<div>
 		<%= form_for Player.new do |f| %>
@@ -9,16 +9,8 @@
 				<%= f.text_field(:name) %>
 			</p>
 			<p>
-				<%= label(:email) %>:
-				<%= f.text_field(:email) %>
-			</p>
-			<p>
-				<%= f.label(:password) %>
-				<%= f.password_field(:password) %>
-			</p>
-			<p>
-				<%= f.label(:password_confirmation) %>
-				<%= f.password_field(:password_confirmation) %>
+				<%= f.label(:team) %>:
+				<%= f.collection_select(:team, @teams, :id, :name) %>
 			</p>
 			<p>
 				<%= f.submit("Create Season") %>

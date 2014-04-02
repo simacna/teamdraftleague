@@ -11,7 +11,27 @@ class PlayersController < ApplicationController
 	end
 
 	def new
-		render :new
+		@teams = Team.all
+		# render :new
+	end
+
+	def create
+
+		name = params["player"]["name"]
+		team_id = params["player"]["team"]
+		team = Team.find(team_id)
+
+		player = Player.new(name: name)
+
+		if player.save
+			team.players << player
+			flash[:success] = "Player successfully created."
+			redirect_to("/admin")
+		else
+			flash[:error] = "Something went wrong! #{response.message}"
+			redirect_to("/players/new")
+		end
+
 	end
 
 	def edit
