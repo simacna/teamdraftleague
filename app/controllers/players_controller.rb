@@ -18,10 +18,11 @@ class PlayersController < ApplicationController
 	def create
 
 		name = params["player"]["name"]
+		bio = params["player"]["bio"]
 		team_id = params["player"]["team"]
 		team = Team.find(team_id)
 
-		player = Player.new(name: name)
+		player = Player.new(name: name, bio: bio)
 
 		if player.save
 			team.players << player

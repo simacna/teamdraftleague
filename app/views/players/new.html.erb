@@ -9,11 +9,15 @@
 				<%= f.text_field(:name) %>
 			</p>
 			<p>
+				<%= f.label(:bio) %>:
+				<%= f.text_field(:bio, :size => 75) %>
+			</p>
+			<p>
 				<%= f.label(:team) %>:
 				<%= f.collection_select(:team, @teams, :id, :name) %>
 			</p>
 			<p>
-				<%= f.submit("Create Season") %>
+				<%= f.submit("Create Player") %>
 			</p>
 		<% end %>
 	</div>

@@ -39,7 +39,9 @@
 				<% @season.matches.where(challonge_week: t + 1).each do |match| %>
 					<tr>
 						<td class='teamname'>
-							<%= Team.find(match.team_id).name %>
+							<a href="/matches/<%= match.id %>">
+								<%= Team.find(match.team_id).name %>
+							</a>
 						</td>
 						<td class='result'>
 							<% if match.winner == nil %>
@@ -55,7 +57,9 @@
 							vs.
 						</td>
 						<td class='teamname'>
-							<%= Team.find(match.challenger_id).name %>
+							<a href="/matches/<%= match.id %>">
+								<%= Team.find(match.challenger_id).name %>
+							</a>
 						</td>
 						<td class='result'>
 							<% if match.winner == nil %>

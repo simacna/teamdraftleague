@@ -1,0 +1,26 @@
+<div class="bios">
+
+	<div class="pagetitle">
+		<h1>Report for Week <%= @match.challonge_week %></h1>
+	</div>
+
+	<div>
+		<h2><%= @match.team.name %> vs.	<%= @match.challenger.name %></h2>
+	</div>
+
+	<div>
+		<%= form_for @match do |f| %>
+			<p>
+				<%= f.label(:winner) %>:
+				<%= collection_select :winner, :id, Team.where("id = ? or id =  ?", @match.team.id, @match.challenger.id), :id, :name %>
+			</p>
+			<p>
+				<%= f.label("Games") %>:
+				<%= f.text_field(:challonge_match_csv, :placeholder => "0-0") %>
+			</p>
+			<p>
+				<%= f.submit("Submit Result") %>
+			</p>
+		<% end %>
+	</div>
+</div>

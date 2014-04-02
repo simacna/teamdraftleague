@@ -20,6 +20,7 @@ TeamdraftleagueApp::Application.routes.draw do
   resources :admin
   resources :seasons
   resources :users
+  resources :matches
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

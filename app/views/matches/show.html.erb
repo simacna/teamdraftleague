@@ -1,0 +1,17 @@
+<div class="players">
+	<div class="pagetitle">
+		<h1>Week <%= @match.challonge_week %></h1>
+	</div>
+	<div>
+		<h2><%= @match.team.name %> vs.	<%= @match.challenger.name %></h2>
+	</div>
+	<div>
+		<% if @match.winner == nil %>
+			<a href="/matches/<%= @match.id %>/edit">Report your result!</a>
+		<% else %>
+			<p>
+				<%= @winner.name %> won <%= @match.challonge_match_csv %>.
+			</p>
+		<% end %>
+	</div>
+</div>
