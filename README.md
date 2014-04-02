@@ -1,6 +1,6 @@
 ## Team Draft League
 
-Team Draft League is a Rails project designed to facilitate the setup and running of any team-based league. It allows for:
+Team Draft League is a Rails project designed to facilitate the setup and maintenance of any team-based league. It allows for:
 * Player, team, and league creation
 * Multiple seasons
 * Match scheduling and reporting
