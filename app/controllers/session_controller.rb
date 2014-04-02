@@ -19,7 +19,7 @@ class SessionController < ApplicationController
 	end
 
 	def destroy
-		session[:player_id] = nil
+		session[:user_id] = nil
 		# session_reset
 		redirect_to("/")
 		# redirect_to(root_path)

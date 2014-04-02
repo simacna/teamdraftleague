@@ -20,6 +20,12 @@ class ApplicationController < ActionController::Base
 		end
 	end
 
-	helper_method(:current_user, :logged_in?, :require_admin)
+	def check_admin
+		if logged_in? && current_user.admin
+			return true
+		end
+	end
+
+	helper_method(:current_user, :logged_in?, :require_admin, :check_admin)
 
 end
