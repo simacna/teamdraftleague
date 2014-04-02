@@ -5,6 +5,9 @@ TeamdraftleagueApp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  get 'signout' => 'session#destroy'
+  get '/teams/choose_team' => 'teams#choose_team'
+  
   resources :players
   resources :teams
   resources :schedule
@@ -16,7 +19,6 @@ TeamdraftleagueApp::Application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
-  get 'signout' => 'session#destroy'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

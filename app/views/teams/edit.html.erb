@@ -1,0 +1,21 @@
+<div class="bios">
+
+	<div class="pagetitle">
+		<h1>Edit <%= @team.name %></h1>
+	</div>
+
+	<div>
+		<%= form_for @team do |f| %>
+			<p>
+				<%= f.label(:name) %>:
+				<%= f.text_field(:name) %>
+			</p>
+			<p>
+				<%= f.hidden_field(:id, :value => @team.id) %>
+			</p>
+			<p>
+				<%= f.submit("Edit Team") %>
+			</p>
+		<% end %>
+	</div>
+</div>
