@@ -12,6 +12,7 @@ class MatchesController < ApplicationController
 		@match = Match.find(params["id"])		
 	end
 
+	# Sets match winner
 	def update
 		match_id = params["id"]
 		winner_id = params["winner"]["id"]

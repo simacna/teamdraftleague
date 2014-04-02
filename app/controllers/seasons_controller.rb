@@ -15,7 +15,6 @@ class SeasonsController < ApplicationController
 	# Takes form output from Season#New and makes a Challonge season/tournament.
 	# If the season is successfully created, add the season to the database.
 	def create
-		# response = HTTParty.post("https://api.challonge.com/v1/tournaments.json", :query => {:tournament => {:name => "testing123", :tournament_type => "round robin", :url => "123testing123", :private => "true"}}, :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
 
 		number = params["season"]["number"]
 		challonge_name = params["season"]["challonge_name"]
