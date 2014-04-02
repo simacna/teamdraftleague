@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Gemfile
+ruby "2.1.0"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
@@ -37,6 +40,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 # HTTParty for HTTP requests
 gem 'httparty'
+
+# For Heroku
+gem 'rails_12factor', group: :production
 
 # Use unicorn as the app server
 # gem 'unicorn'
