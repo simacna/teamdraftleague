@@ -8,6 +8,10 @@ TeamdraftleagueApp::Application.routes.draw do
   get 'signout' => 'session#destroy'
   get '/teams/edit_team' => 'teams#edit_team'
   get '/teams/delete_team' => 'teams#delete_team'
+  get '/seasons/start_season'=> 'seasons#start_season'
+  get '/seasons/:id/start' => 'seasons#start'
+  get '/seasons/schedule_matches' => 'seasons#schedule_matches'
+  get '/seasons/:id/create_matches' => 'seasons#create_matches'
 
   resources :players
   resources :teams

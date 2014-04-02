@@ -1,7 +1,7 @@
 class SeasonsController < ApplicationController
 
 	def index
-		@teams = Team.all
+		@seasons = Season.all
 	end
 
 	def new
@@ -34,6 +34,45 @@ class SeasonsController < ApplicationController
 			flash[:error] = "Something went wrong! #{response.message}"
 				redirect_to("/seasons/new")
 		end
+	end
+
+	def start_season
+	end
+
+	def start
+		season_id = params["season"]["id"]
+		season = Season.find(season_id)
+
+		response = HTTParty.post("https://api.challonge.com/v1/tournaments/#{season.challonge_name}/start.json", :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
+
+		if response.code == 200
+			# Set num_teams for season by finding the length of the participants array
+			participants = HTTParty.get("https://api.challonge.com/v1/tournaments/#{season.challonge_name}.json?include_participants=1", :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
+			teams = participants['tournament']['participants'].length
+			season.update(num_teams: teams)
+
+			# Set num_weeks for season by finding the last week of the tournament
+			rounds = HTTParty.get("https://api.challonge.com/v1/tournaments/#{season.challonge_name}.json?include_matches=1", :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
+			weeks = rounds["tournament"]["matches"][-1]["match"]["round"]
+			season.update(num_weeks: weeks)
+			season.create_matches
+			flash[:success] = "Season successfully started."
+			redirect_to("/admin")
+		else
+			flash[:error] = "Something went wrong! #{response.message}"
+			redirect_to("/seasons/start_season")
+		end
+
+	end
+
+	def schedule_matches
+	end
+
+	def create_matches
+		season_id = params["season"]["id"]
+		season = Season.find(season_id)
+		season.create_matches
+		redirect_to("/admin")
 	end
 
 end

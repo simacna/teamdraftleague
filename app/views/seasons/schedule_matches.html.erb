@@ -1,0 +1,13 @@
+<div class="bios">
+
+	<div class="pagetitle">
+		<h1>Choose Season to Schedule Matches</h1>
+	</div>
+
+	<div>
+		<%= form_tag "/seasons/:id/create_matches", :method => :get do %>
+ 			 <%= collection_select :season, :id, Season.all, :id, :number %>
+ 			 <button type="submit" class="btn">Select</button>
+		<% end %>
+	</div>
+</div>

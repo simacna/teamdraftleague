@@ -5,7 +5,7 @@
 	</div>
 
 	<div>
-		<%= form_tag "/teams/:id/edit", :method => :get do %>
+		<%= form_tag "/seasons/:id", :method => :delete do %>
  			 <%= collection_select :team, :id, Team.all, :id, :name %>
  			 <button type="submit" class="btn">Select</button>
 		<% end %>

@@ -29,6 +29,5 @@ class UsersController < ApplicationController
 			redirect_to("/users/new")
 		end
 
-		binding.pry
 	end
 end
