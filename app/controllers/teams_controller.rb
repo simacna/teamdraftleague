@@ -54,7 +54,7 @@ class TeamsController < ApplicationController
 
 		team = Team.find(team_id)
 		team.update(name: name)
-		
+
 		challonge_season = Season.find(team.season_id)
 		challonge_season_name = challonge_season.challonge_name
 
@@ -74,7 +74,28 @@ class TeamsController < ApplicationController
 
 	end
 
-	def choose_team
-		render :choose_team
+	def destroy
+		team_id = params["team"]["id"]
+		team = Team.find(team_id)
+		challonge_season_name = team.season.challonge_name
+		team.destroy
+
+		response = HTTParty.delete("https://api.challonge.com/v1/tournaments/#{challonge_season_name}/participants/#{team.challonge_team_number}.json", :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
+		if response.code == 200
+			flash[:success] = "Team successfully deleted."
+			redirect_to("/admin")
+		else
+			flash[:error] = "Something went wrong!"
+			redirect_to("/admin")
+		end
+
+	end
+
+	def edit_team
+		render :edit_team
+	end
+
+	def delete_team
+		render :delete_team
 	end
 end

@@ -6,8 +6,9 @@ TeamdraftleagueApp::Application.routes.draw do
   root 'welcome#index'
 
   get 'signout' => 'session#destroy'
-  get '/teams/choose_team' => 'teams#choose_team'
-  
+  get '/teams/edit_team' => 'teams#edit_team'
+  get '/teams/delete_team' => 'teams#delete_team'
+
   resources :players
   resources :teams
   resources :schedule
