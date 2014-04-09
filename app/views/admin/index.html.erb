@@ -5,35 +5,11 @@
 	</div>
 
 	<div>
-		<h2>Season Options</h2>
-		<a href="/seasons/new"><p>Create New Season</p></a>
-		<!-- number, challonge_name, type, url -->
-		<p>Edit Season</p>
-		<p>Delete Season</p>
-		<a href="/seasons/start_season"><p>Start Season</p></a>
-		<!-- num_teams, num_weeks  -->
-
-		<h2>Match Options</h2>
-		<a href="/seasons/schedule_matches"><p>Schedule Matches</p></a>
-
-		<h2>Team Options</h2>
-		<a href="/teams/new"><p>Create Team</p></a>
-		<!-- Name, season_id, challonge_team_name -->
-		<a href="/teams/edit_team"><p>Edit Team</p></a>
-		<a href="/teams/delete_team"><p>Delete Team</p></a>
-
-		<h2>User Options</h2>
-		<a href="/users/new"><p>Create New User</p></a>
-		<!-- Add email and password to player, maybe admin -->
-		<p>Edit User</p>
-		<p>Delete User</p>
-
-		<h2>Player Options</h2>
-		<a href="/players/new"><p>Create New Player</p></a>
-		<p>Edit Player</p>
-		<!-- Name, bio // Add to team -->
-		<p>Delete Player</p>
-
+		<%= render "season" %>
+		<%= render "match" %>
+		<%= render "team" %>
+		<%= render "user" %>
+		<%= render "player" %>
 	</div>
 
 </div>

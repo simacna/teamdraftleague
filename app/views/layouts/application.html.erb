@@ -12,7 +12,7 @@
 <div class="wrap">
 	
 	<div class="nav">
-		<a href="/">Home</a> | <a href="/players">Players</a> | <a href="/teams">Teams</a> | <a href="/schedule">Schedule</a> | <a href="/seasons">Previous Seasons</a> | <% if logged_in? %><a href="/users/<%= current_user.id %>"><%= current_user.name %></a> | <a href="/signout">Sign Out</a><% else %><a href="/session/new">Sign In</a><% end %><% if check_admin %> | <a href="/admin">Admin</a><% end %>
+		<%= render "layouts/nav" %>
 	</div>
 
 	<div class='homelogo'>
