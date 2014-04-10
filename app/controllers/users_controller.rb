@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 	end
 
 	def create
-
 		name = params["user"]["name"]
 		email = params["user"]["email"]
 		password = params["user"]["password"]
