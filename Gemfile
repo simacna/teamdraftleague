@@ -53,13 +53,16 @@ gem 'rails_12factor', group: :production
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :development do
-	gem "pry-rails"
-	gem 'annotate'
-	gem 'rails-erd'
-end
-
 group :development, :test do
+  gem 'pry-rails'
+  gem 'rspec'
   gem 'rspec-rails'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-bundler', require: false
+  gem 'terminal-notifier-guard'
   gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'rubocop'
 end
