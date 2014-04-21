@@ -1,6 +1,7 @@
 body {
-	font-family: Old Standard TT;
+	font-family: Georgia;
 	font-size: 16px;
+	line-height: 22px;
 	display: block;
 	color: rgb(70,70,90);
 }
@@ -17,6 +18,12 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+a:hover {
+	color: rgb(255,100,0);
+}
+.schedule a:hover {
+	color: rgb(70,70,90);
+}
 
 /* Site Structure */
 .wrap {
@@ -31,11 +38,17 @@ a {
 	display: block;
 	padding-top: 5px;
 }
+.error, .success {
+	width: 450px;
+	margin: 0 auto;
+	padding-top: 40px;
+	display: table;
+	text-align: center;
+}
 .schedule {
 	width: 450px;
 	margin: 0 auto;
 	display: table;
-	padding-top: 50px;
 }
 .logo {
 	height: 520px;
@@ -50,20 +63,19 @@ a {
 	height: 300px;
 	width: 650px;
 	margin: 0 auto;
-	padding-top: 50px;
 	display: table;
 }
 .bios, .teams, .players {
 	width: 450px;
 	text-align: justify;
 	margin: 0 auto;
-	padding-top: 50px;
 	display: table;
-	font-family: Old Standard TT;
+	font-family: Georgia;
 }
 .bios h1, .schedule h1, .teams h1, .players h1 {
 	text-align: center;
 	font-family: Lato, sans-serif;
+	line-height: 60px;
 }
 .bios h2, .schedule h2, .teams h2, .players h2 {
 	text-align: center;
@@ -98,7 +110,7 @@ th {
 }
 td {
 	padding: 2px;
-	font-size: 16px;
+	font-size: 15px;
 	padding-left: 10px;
 	padding-right: 10px;
 }

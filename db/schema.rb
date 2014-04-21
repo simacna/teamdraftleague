@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401230031) do
+ActiveRecord::Schema.define(version: 20140421023610) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20140401230031) do
     t.string  "challonge_name"
     t.integer "num_weeks"
     t.integer "num_teams"
+    t.boolean "active",         default: false
   end
 
   create_table "teams", force: true do |t|

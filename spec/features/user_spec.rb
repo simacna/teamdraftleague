@@ -32,7 +32,6 @@ def create_user(user)
   fill_in("user_email", {:with => user.email})
   fill_in("user_password", {:with => user.password})
   fill_in("user_password_confirmation", {:with => user.password})
-  save_and_open_page
   select("Jon Sieber", from: "user_player")
   click_button("Create Player") 
 end
