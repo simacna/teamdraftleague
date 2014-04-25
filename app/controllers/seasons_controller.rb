@@ -78,4 +78,8 @@ class SeasonsController < ApplicationController
 		redirect_to("/admin")
 	end
 
+	def make_active
+		
+	end
+
 end

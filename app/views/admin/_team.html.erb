@@ -1,5 +1,10 @@
 <h2>Team Options</h2>
-<a href="/teams/new"><p>Create Team</p></a>
-<!-- Name, season_id, challonge_team_name -->
-<a href="/teams/edit_team"><p>Edit Team</p></a>
-<a href="/teams/delete_team"><p>Delete Team</p></a>
+<p>
+  <%= link_to "Create Team", new_team_path %>
+</p>
+<p>
+  <%= link_to "Edit Team", "/teams/edit_team" %>
+</p>
+<p>
+  <%= link_to "Delete Team", "/teams/delete_team" %>
+</p>
