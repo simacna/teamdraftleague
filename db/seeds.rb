@@ -27,17 +27,9 @@ jon_sieber = Player.create(name: "Jon Sieber", bio: "The only notable thing Jon 
 
 alex_owen = Player.create(name: "Alex Owen", bio: "Alex Owen is a southern boy with eyes that were made to get lost in. His hobbies include Magic: The Gathering, working out, and working it. He never really started playing Magic and he probably will never really stop. Alex is known within the magic community for his catch phrases which he will seemingly exclaim at random during public matches. Phrases such as \"ay papi! Si, mas rapido!\" and of course the classic Michael Jackson \"Shi-Shi-mongggga!\" are beloved by all. BELOVED BY ALL. A modest accounting professional by day and a shark of trades by night, Alex remains a mystery, yet to be unraveled, and like Pandora's box, you may not want to know the truth but can't stop yourself from finding out.")
 
-hugh_kramer.save!
-
 j_chan.players << hugh_kramer 
 j_chan.players << jon_sieber 
 j_chan.players << alex_owen
-
-j_chan_players = j_chan.players.each do |player|
-					puts player.name
-				end
-
-puts "J-Chan (#{j_chan.name}) and players (#{j_chan_players}) created."
 
 scryducks = Team.create(name: "ScryDucks")
 
@@ -56,12 +48,6 @@ scryducks.players << matt_jones
 scryducks.players << kadar_brock 
 scryducks.players << nick_forker
 
-scryducks_players = scryducks.players.each do |player|
-						puts player.name
-					end
-
-puts "ScryDucks (#{scryducks.name} and players (#{scryducks_players}) created."
-
 cackasaurus = Team.create(name: "Cackasaurus")
 
 
@@ -74,12 +60,6 @@ austin_k = Player.create(name: "Austin K", bio: "...")
 cackasaurus.players << dan_black 
 cackasaurus.players << dan_garfield 
 cackasaurus.players << austin_k
-
-cackasaurus_players = cackasaurus.players.each do |player|
-						puts player.name
-					end
-
-puts "Cackasaurus (#{cackasaurus.name}) and players (#{cackasaurus_players}) created."
 
 jung_gunz = Team.create(name: "Jung Gunz")
 
@@ -96,12 +76,6 @@ jung_gunz.players << zach_barash
 jung_gunz.players << nick_heppding 
 jung_gunz.players << richard_tan
 
-jung_gunz_players = jung_gunz.players.each do |player|
-						puts player.name
-					end
-
-puts "JungGunz (#{jung_gunz.name}) and players (#{jung_gunz_players}) created."
-
 loam = Team.create(name: "Life from the LOaM")
 
 
@@ -117,12 +91,6 @@ loam.players << monique_garraud
 loam.players << orlando_santiago 
 loam.players << anthony_lebron
 
-loam_players = loam.players.each do |player|
-						puts player.name
-					end
-
-puts "LOaM (#{loam.name}) and players (#{loam_players}) created."
-
 clockwerk_beats = Team.create(name: "Clockwerk Beats")
 
 hunter_slaton = Player.create(name: "Hunter \"Rolex\" Slaton", bio: "Hunter Slaton first picked up Magic when he was a kid, around the time of Revised and Fallen Empires, alongside his best friend at the time. Both of our sets of parents made it a condition of our playing that we throw away all the black cards immediately upon opening them, because of Jesus. Hunter didn't play again until Dissension, when he found an awesome playgroup through Craigslist, which used to play at a deli near the Chrysler Building. Hunter pretty much exclusively plays Limited, aka God's Format. He has a four-digit DCI number, and lives five minutes' walk from the 20 Sided Store in Williamsburg, Brooklyn.")
@@ -134,12 +102,6 @@ brendan_mcnamara = Player.create(name: "Brendan \"B-Mac\" McNamara", bio: "Brend
 clockwerk_beats.players << hunter_slaton 
 clockwerk_beats.players << david_mccoy 
 clockwerk_beats.players << brendan_mcnamara
-
-clockwerk_beats_players = clockwerk_beats.players.each do |player|
-							puts player.name
-						end
-
-puts "Clockwerk (#{clockwerk_beats.name}) and players (#{clockwerk_beats_players}) created."
 
 team_handsome = Team.create(name: "Team Handsome")
 
@@ -154,12 +116,6 @@ team_handsome.players << dom_neitz
 team_handsome.players << sean_morse 
 team_handsome.players << derek_gallen
 
-team_handsome_players = team_handsome.players.each do |player|
-							puts player.name
-						end
-
-puts "Team Handsome (#{team_handsome.name}) and players (#{team_handsome_players}) created."
-
 abeysitters = Team.create(name: "Abeysitters")
 
 dylan_heister = Player.create(name: "Dylan Heister", bio: "Dylan Hiester spends his time surrounded by a need, an urge, an unending desire to shuffle and snap cards rapidly and annoyingly between his fingers. This desire led him to magic the gathering at the tender age of... whatever age first graders are. He remember the joy of casting nightmare and verdant force as a wee lad. He remembers in standard casting a turn two Grim Monolith into turn three Sneak Attack, activate - Crater Hellion, activate - Serra Avatar swing for lethal. He loves resolving things early (if you know what I mean) like turn two planeswalkers or Sun Titan off of Black Lotus, return Lotus then cast Lilliana, of the Veil. He left competitive play in high school and returned for the Alara block. Turn two Woolly Thoctar. Amirite?!?! He has enjoyed watching Twenty sided store and its inhabitants grow as magic players, a store and other kinds of things. He is proud to be a member of team The Abey Sitters.")
@@ -173,94 +129,91 @@ abeysitters.players << dylan_heister
 abeysitters.players << abe_lusk 
 abeysitters.players << jonathan_pena
 
-abeysitters_players = abeysitters.players.each do |player|
-							puts player.name
-						end
-
-
-puts "Abeysitters (#{abeysitters.name}) and players #{abeysitters_players} created."
-
 season1 = Season.create(number: 1, challonge_name: "iy7fpc0t", num_weeks: 7, num_teams: 8)
 season1.save
 
-puts "Season 1 created."
-
 season1.teams << j_chan
-puts "j_chan season #{j_chan.season} added."
 season1.teams << scryducks
-puts "scryducks season #{scryducks.season} added."
 season1.teams << cackasaurus
-puts "cackasaurus season #{cackasaurus.season} added."
 season1.teams << clockwerk_beats
-puts "clockwerk_beats season #{clockwerk_beats.season} added."
 season1.teams << jung_gunz
-puts "jung_gunz season #{jung_gunz.season} added."
 season1.teams << team_handsome
-puts "team_handsome season #{team_handsome.season} added."
 season1.teams << abeysitters
-puts "abeysitters season #{abeysitters.season} added."
 season1.teams << loam
-puts "loam season #{loam.season} added."
 season1.save
 
-puts "Teams added to Season 1."
 
 j_chan.set_challonge_team_number
-j_chan.save!
-puts j_chan.name
-puts j_chan.season_id
-puts j_chan.challonge_team_number
-puts j_chan.inspect
-j_chan_re = Team.find_by(name: "J-Chan All-Stars")
-puts j_chan_re.inspect
+j_chan.save
 scryducks.set_challonge_team_number
 scryducks.save
-puts scryducks.name
-puts scryducks.season_id
-puts scryducks.challonge_team_number
-puts "scryducks saved."
 cackasaurus.set_challonge_team_number
 cackasaurus.save
-puts cackasaurus.name
-puts cackasaurus.season_id
-puts cackasaurus.challonge_team_number
-puts "cackasaurus saved."
 jung_gunz.set_challonge_team_number
 jung_gunz.save
-puts jung_gunz.name
-puts jung_gunz.season_id
-puts jung_gunz.challonge_team_number
-puts "jung_gunz saved."
 loam.set_challonge_team_number
 loam.save
-puts loam.name
-puts loam.season_id
-puts loam.challonge_team_number
-puts "loam saved."
 clockwerk_beats.set_challonge_team_number
 clockwerk_beats.save
-puts clockwerk_beats.name
-puts clockwerk_beats.season_id
-puts clockwerk_beats.challonge_team_number
-puts "clockwerk_beats saved."
 team_handsome.set_challonge_team_number
 team_handsome.save
-puts team_handsome.name
-puts team_handsome.season_id
-puts team_handsome.challonge_team_number
-puts "team_handsome saved."
 abeysitters.set_challonge_team_number
 abeysitters.save
-puts abeysitters.name
-puts abeysitters.season_id
-puts abeysitters.challonge_team_number
-puts "abeysitters saved."
-
-puts "Challonge team numbers added."
 
 season1.create_matches
 
-puts "Season 1 matches created."
-
 admin = User.new(name: "David McCoy", password: "password", password_confirmation: "password", email: "david.mccoy@gmail.com", admin: true)
 admin.save
+
+season2a = Season.create(number: 2, challonge_name: "tdl2lorwyn", num_weeks: 5, num_teams: 6)
+season2a.save
+
+hagamemnites = Team.create(name: "Hagamemnites")
+bongokratis = Team.create(name: "Bongokratis")
+scryducks = Team.create(name: "ScryDucks")
+her_big = Team.create(name: "Her Big Shister")
+j_chan = Team.create(name: "J-Chan All-Stars")
+steve = Team.create(name: "Steve")
+
+season2a.teams << hagamemnites
+season2a.teams << bongokratis
+season2a.teams << scryducks
+season2a.teams << her_big
+season2a.teams << j_chan
+season2a.teams << steve
+
+hagamemnites.set_challonge_team_number
+bongokratis.set_challonge_team_number
+scryducks.set_challonge_team_number
+her_big.set_challonge_team_number
+j_chan.set_challonge_team_number
+steve.set_challonge_team_number
+
+season2a.create_matches
+
+season2b = Season.create(number: 2, challonge_name: "tdl2shadowmoor", num_weeks: 5, num_teams: 60-40)
+season2b.save
+
+rhox = Team.create(name: "Rhox Paper Scissors")
+hail_slaton = Team.create(name: "Hail Slaton")
+richard = Team.create(name: "Richard and the Tanimals")
+goblin = Team.create(name: "Goblin Bushwickers")
+protect = Team.create(name: "Protect Ya Deck")
+lemures = Team.create(name: "Les Lemures")
+
+season2b.teams << rhox
+season2b.teams << hail_slaton
+season2b.teams << richard
+season2b.teams << goblin
+season2b.teams << protect
+season2b.teams << lemures
+
+rhox.set_challonge_team_number
+hail_slaton.set_challonge_team_number
+richard.set_challonge_team_number
+goblin.set_challonge_team_number
+protect.set_challonge_team_number
+lemures.set_challonge_team_number
+
+season2b.create_matches
+
