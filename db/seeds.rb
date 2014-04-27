@@ -162,6 +162,108 @@ abeysitters.save
 
 season1.create_matches
 
+# manually edit season 1
+
+# week 1
+match5 = Match.find_by(challonge_match_number: 19543973)
+match5.challonge_week = 1
+match5.save!
+match8 = Match.find_by(challonge_match_number: 19543955)
+match8.challonge_week = 1
+match8.save!
+match24 = Match.find_by(challonge_match_number: 19543962)
+match24.challonge_week = 1
+match24.save!
+match27 = Match.find_by(challonge_match_number: 19543964)
+match27.challonge_week = 1
+match27.save!
+
+# week 2
+match7 = Match.find_by(challonge_match_number: 19543961)
+match7.challonge_week = 2
+match7.save!
+match10 = Match.find_by(challonge_match_number: 19543971)
+match10.challonge_week = 2
+match10.save!
+match16 = Match.find_by(challonge_match_number: 19543960)
+match16.challonge_week = 2
+match16.save!
+match23 = Match.find_by(challonge_match_number: 19543969)
+match23.challonge_week = 2
+match23.save!
+
+# week 3
+match2 = Match.find_by(challonge_match_number: 19543956)
+match2.challonge_week = 3
+match2.save!
+match11 = Match.find_by(challonge_match_number: 19543975)
+match11.challonge_week = 3
+match11.save!
+match17 = Match.find_by(challonge_match_number: 19543977)
+match17.challonge_week = 3
+match17.save!
+match22 = Match.find_by(challonge_match_number: 19543968)
+match22.challonge_week = 3
+match22.save!
+
+# week 4
+match4 = Match.find_by(challonge_match_number: 19543970)
+match4.challonge_week = 4
+match4.save!
+match12 = Match.find_by(challonge_match_number: 19543959)
+match12.challonge_week = 4
+match12.save!
+match21 = Match.find_by(challonge_match_number: 19543957)
+match21.challonge_week = 4
+match21.save!
+match26 = Match.find_by(challonge_match_number: 19543958)
+match26.challonge_week = 4
+match26.save!
+
+
+# week 5
+match1 = Match.find_by(challonge_match_number: 19543976)
+match1.challonge_week = 5
+match1.save!
+match9 = Match.find_by(challonge_match_number: 19543963)
+match9.challonge_week = 5
+match9.save!
+match14 = Match.find_by(challonge_match_number: 19543974)
+match14.challonge_week = 5
+match14.save!
+match25 = Match.find_by(challonge_match_number: 19543972)
+match25.challonge_week = 5
+match25.save!
+
+# week 6
+match3 = Match.find_by(challonge_match_number: 19543966)
+match3.challonge_week = 6
+match3.save!
+match13 = Match.find_by(challonge_match_number: 19543967)
+match13.challonge_week = 6
+match13.save!
+match18 = Match.find_by(challonge_match_number: 19543965)
+match18.challonge_week = 6
+match18.save!
+match19 = Match.find_by(challonge_match_number: 19543978)
+match19.challonge_week = 6
+match19.save!
+
+# week 7
+match6 = Match.find_by(challonge_match_number: 19543979)
+match6.challonge_week = 7
+match6.save!
+match15 = Match.find_by(challonge_match_number: 19543980)
+match15.challonge_week = 7
+match15.save!
+match20 = Match.find_by(challonge_match_number: 19543982)
+match20.challonge_week = 7
+match20.save!
+match28 = Match.find_by(challonge_match_number: 19543981)
+match28.challonge_week = 7
+match28.save!
+
+
 admin = User.new(name: "David McCoy", password: "password", password_confirmation: "password", email: "david.mccoy@gmail.com", admin: true)
 admin.save
 
@@ -190,6 +292,61 @@ j_chan.set_challonge_team_number
 steve.set_challonge_team_number
 
 season2a.create_matches
+
+# manually edit season 2 weeks
+# bongo 224
+# hag 223
+# scry 225
+# steve 228
+# j-chan 227
+# herbig 226
+
+m1 = Match.find_by(challonge_match_number: 20593294)
+m1.challonge_week = 1
+m1.save!
+m2 = Match.find_by(challonge_match_number: 20593293)
+m2.challonge_week = 1
+m2.save!
+m3 = Match.find_by(challonge_match_number: 20593295)
+m3.challonge_week = 1
+m3.save!
+m4 = Match.find_by(challonge_match_number: 20593298)
+m4.challonge_week = 3
+m4.save!
+m5 = Match.find_by(challonge_match_number: 20593297)
+m5.challonge_week = 2
+m5.save!
+m6 = Match.find_by(challonge_match_number: 20593296)
+m6.challonge_week = 4
+m6.save!
+m7 = Match.find_by(challonge_match_number: 20593300)
+m7.challonge_week = 2
+m7.save!
+m8 = Match.find_by(challonge_match_number: 20593301)
+m8.challonge_week = 5
+m8.save!
+m9 = Match.find_by(challonge_match_number: 20593299)
+m9.challonge_week = 3
+m9.save!
+m10 = Match.find_by(challonge_match_number: 20593304)
+m10.challonge_week = 3
+m10.save!
+m11 = Match.find_by(challonge_match_number: 20593303)
+m11.challonge_week = 4
+m11.save!
+m12 = Match.find_by(challonge_match_number: 20593302)
+m12.challonge_week = 5
+m12.save!
+m13 = Match.find_by(challonge_match_number: 20593306)
+m13.challonge_week = 4
+m13.save!
+m14 = Match.find_by(challonge_match_number: 20593305)
+m14.challonge_week = 2
+m14.save!
+m15 = Match.find_by(challonge_match_number: 20593307)
+m15.challonge_week = 5
+m15.save!
+
 
 season2b = Season.create(number: 2, challonge_name: "tdl2shadowmoor", num_weeks: 5, num_teams: 60-40)
 season2b.save
