@@ -421,3 +421,8 @@ m29.save!
 m30 = Match.find_by(challonge_match_number: 20593396)
 m30.challonge_week = 2
 m30.save!
+
+season2a.active = true
+season2a.save!
+season2b.active = true
+season2b.save!
