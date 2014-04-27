@@ -293,7 +293,7 @@ steve.set_challonge_team_number
 
 season2a.create_matches
 
-# manually edit season 2 weeks
+# manually edit season 2a weeks
 # bongo 224
 # hag 223
 # scry 225
@@ -374,3 +374,50 @@ lemures.set_challonge_team_number
 
 season2b.create_matches
 
+# manually edit season 2b weeks
+
+m16 = Match.find_by(challonge_match_number: 20593383)
+m16.challonge_week = 1
+m16.save!
+m17 = Match.find_by(challonge_match_number: 20593385)
+m17.challonge_week = 1
+m17.save!
+m18 = Match.find_by(challonge_match_number: 20593384)
+m18.challonge_week = 1
+m18.save!
+m19 = Match.find_by(challonge_match_number: 20593388)
+m19.challonge_week = 5
+m19.save!
+m20 = Match.find_by(challonge_match_number: 20593387)
+m20.challonge_week = 5
+m20.save!
+m21 = Match.find_by(challonge_match_number: 20593386)
+m21.challonge_week = 5
+m21.save!
+m22 = Match.find_by(challonge_match_number: 20593390)
+m22.challonge_week = 4
+m22.save!
+m23 = Match.find_by(challonge_match_number: 20593389)
+m23.challonge_week = 4
+m23.save!
+m24 = Match.find_by(challonge_match_number: 20593391)
+m24.challonge_week = 4
+m24.save!
+m25 = Match.find_by(challonge_match_number: 20593394)
+m25.challonge_week = 3
+m25.save!
+m26 = Match.find_by(challonge_match_number: 20593393)
+m26.challonge_week = 3
+m26.save!
+m27 = Match.find_by(challonge_match_number: 20593392)
+m27.challonge_week = 3
+m27.save!
+m28 = Match.find_by(challonge_match_number: 20593395)
+m28.challonge_week = 2
+m28.save!
+m29 = Match.find_by(challonge_match_number: 20593397)
+m29.challonge_week = 2
+m29.save!
+m30 = Match.find_by(challonge_match_number: 20593396)
+m30.challonge_week = 2
+m30.save!
