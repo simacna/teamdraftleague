@@ -12,6 +12,8 @@ TeamdraftleagueApp::Application.routes.draw do
   get '/seasons/:id/start' => 'seasons#start'
   get '/seasons/schedule_matches' => 'seasons#schedule_matches'
   get '/seasons/:id/create_matches' => 'seasons#create_matches'
+  get '/users/select_user' => 'users#select_user'
+  get '/users/edit_user' => 'users#edit_user'
 
   resources :players
   resources :teams

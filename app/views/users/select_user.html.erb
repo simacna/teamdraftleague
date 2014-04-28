@@ -1,0 +1,13 @@
+<div class="bios">
+
+  <div class="pagetitle">
+    <h1>Choose User to Edit</h1>
+  </div>
+
+  <div>
+    <%= form_tag "/users/edit_user", :method => :get do %>
+       <%= collection_select :user, :id, User.all, :id, :name %>
+       <button type="submit" class="btn">Select</button>
+    <% end %>
+  </div>
+</div>

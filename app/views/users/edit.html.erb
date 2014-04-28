@@ -1,0 +1,33 @@
+<div class="players">
+  <div class="pagetitle">
+    <h1>Edit User</h1>
+  </div>
+  <div>
+    <%= form_for @user do |f| %>
+      <p>
+        <%= f.label(:name) %>:
+        <%= f.text_field(:name) %>
+      </p>
+      <p>
+        <%= f.label(:email) %>:
+        <%= f.text_field(:email) %>
+      </p>
+      <p>
+        <%= f.label(:password) %>:
+        <%= f.password_field(:password) %>
+      </p>
+      <p>
+        <%= f.label(:password_confirmation) %>:
+        <%= f.password_field(:password_confirmation) %>
+      </p>
+      <p>
+        <%= f.label(:player) %>:
+        <%= f.collection_select(:player, @players, :id, :name) %>
+      </p>
+      <% f.hidden_field :id %>
+      <p>
+        <%= f.submit("Edit User") %>
+      </p>
+    <% end %>
+  </div>
+</div>
