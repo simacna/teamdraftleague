@@ -267,7 +267,7 @@ match28.save!
 admin = User.new(name: "David McCoy", password: "password", password_confirmation: "password", email: "david.mccoy@gmail.com", admin: true)
 admin.save
 
-season2a = Season.create(number: 2, challonge_name: "tdl2lorwyn", num_weeks: 5, num_teams: 6)
+season2a = Season.create(number: 2, challonge_name: "tdl2lorwyn", num_weeks: 5, num_teams: 6, name: "Lorwyn Division")
 season2a.save
 
 hagamemnites = Team.create(name: "Hagamemnites")
@@ -348,7 +348,7 @@ m15.challonge_week = 5
 m15.save!
 
 
-season2b = Season.create(number: 2, challonge_name: "tdl2shadowmoor", num_weeks: 5, num_teams: 60-40)
+season2b = Season.create(number: 2, challonge_name: "tdl2shadowmoor", num_weeks: 5, num_teams: 6, name: "Shadowmoor Division")
 season2b.save
 
 rhox = Team.create(name: "Rhox Paper Scissors")

@@ -1,7 +1,7 @@
 class ScheduleController < ApplicationController
 
 	def index
-		@season = Season.find_by(number: 1)
+		@season = Season.where(number: 2)
 	end
 
 end

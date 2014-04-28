@@ -2,8 +2,7 @@
 	<div class="pagetitle">
 		<h1>Schedule</h1>
 	</div>
-	<!-- Will create a table for each week in the season -->
 	<div>
-		<%= render "seasons/table" %>
+		<%= render partial: "table", collection: @season, as: "season" %>
 	</div>
-</div> <!-- schedule -->
+</div>

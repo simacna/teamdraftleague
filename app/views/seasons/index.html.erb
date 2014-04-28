@@ -6,7 +6,12 @@
 
 	<!-- Iterates over each season and lists its name -->
 	<% @seasons.each do |season| %>
-		<p><a href="/seasons/<%= season.id %>">Season <%= season.number %></a></p>
+		<p><a href="/seasons/<%= season.id %>">
+      Season <%= season.number %> 
+      <% if season.name != nil %>
+        (<%= season.name %>)
+      <% end %>
+    </a></p>
 	<% end %>
 
 </div>

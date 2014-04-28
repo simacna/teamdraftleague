@@ -1,0 +1,69 @@
+<h2><%= season.name %></h2>
+<% season.num_weeks.times do |t| %>
+  <table class='scheduletable'>
+    <thead>
+        <th colspan='5' class='tabletitle'>
+          Round <%= t + 1 %>
+        </th>
+      </tr>
+      <tr>
+        <th class="columntitle">
+          Home Team
+        </th>
+        <th class="columntitle">
+          W/L
+        </th>
+        <th class="columntitle">
+          vs.
+        </th>
+        <th class="columntitle">
+          Away Team
+        </th>
+        <th class="columntitle">
+          W/L
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Will iterate over each match and populate a table row -->
+      <% season.matches.where(challonge_week: t + 1).each do |match| %>
+        <tr>
+          <td class='teamname'>
+            <a href="/matches/<%= match.id %>">
+              <%= Team.find(match.team_id).name %>
+            </a>
+          </td>
+          <td class='result'>
+            <% if match.winner == nil %>
+
+            <% elsif match.team_id == match.winner %>
+              W
+            <% elsif match.challenger_id == match.winner %>
+              L
+            <% else %>
+            <% end %>
+          </td>
+          <td>
+            vs.
+          </td>
+          <td class='teamname'>
+            <a href="/matches/<%= match.id %>">
+              <%= Team.find(match.challenger_id).name %>
+            </a>
+          </td>
+          <td class='result'>
+            <% if match.winner == nil %>
+
+            <% elsif match.team_id == match.winner %>
+              L
+            <% elsif match.challenger_id == match.winner %>
+              W
+            <% else %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+
+  </table>
+<% end %>
