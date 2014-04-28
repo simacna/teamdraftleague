@@ -1,3 +1,4 @@
+User.delete_all
 Player.delete_all
 Team.delete_all
 Match.delete_all
@@ -265,7 +266,10 @@ match28.save!
 
 
 admin = User.new(name: "David McCoy", password: "password", password_confirmation: "password", email: "david.mccoy@gmail.com", admin: true)
-admin.save
+admin.save!
+
+david_mccoy.user_id = admin.id
+david_mccoy.save!
 
 season2a = Season.create(number: 2, challonge_name: "tdl2lorwyn", num_weeks: 5, num_teams: 6, name: "Lorwyn Division")
 season2a.save

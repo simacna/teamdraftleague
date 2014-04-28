@@ -9,7 +9,19 @@ class MatchesController < ApplicationController
 	end
 
 	def edit
-		@match = Match.find(params["id"])		
+
+		if logged_in?
+			player = Player.find_by(user_id: current_user.id)
+			@match = Match.find(params["id"])
+			if current_user.admin
+			elsif player.team.id != @match.team.id || player.team.id != @match.challenger_id
+				flash[:error] = "Permissions mismatch."
+				redirect_to "/matches/#{params["id"]}"
+			end
+		else
+			flash[:error] = "Permissions mismatch."
+			redirect_to "/matches/#{params["id"]}"
+		end
 	end
 
 	# Sets match winner
