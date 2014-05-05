@@ -17,14 +17,25 @@ class UsersController < ApplicationController
 
 		user = User.new(name: name, email: email, password: password, password_confirmation: password_confirmation)
 
-		if user.save
-			player = Player.find(player)
-			user.player = player
-			flash[:success] = "User successfully created."
-			redirect_to("/admin")
+
+		# Create the user only if the provided email matches a player's email
+
+		players = Player.pluck(:email)
+
+		if players.include?(user.email)
+			binding.pry
+			if user.save
+				player = Player.find_by(email: user.email)
+				user.player = player
+				flash[:success] = "User successfully created. Welcome, #{user.name}!"
+				redirect_to("/admin")
+			else
+				flash[:error] = "Something went wrong!"
+				redirect_to("/users/new")
+			end
 		else
-			flash[:error] = "Something went wrong! #{response.message}"
-			redirect_to("/users/new")
+			flash[:error] = "Your email does not belong to any known player."
+				redirect_to("/users/new")
 		end
 
 	end
