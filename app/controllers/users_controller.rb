@@ -23,7 +23,6 @@ class UsersController < ApplicationController
 		players = Player.pluck(:email)
 
 		if players.include?(user.email)
-			binding.pry
 			if user.save
 				player = Player.find_by(email: user.email)
 				user.player = player
