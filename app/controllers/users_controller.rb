@@ -16,7 +16,6 @@ class UsersController < ApplicationController
 		player = params["user"]["player"]
 
 		user = User.new(name: name, email: email, password: password, password_confirmation: password_confirmation)
-		user.save
 
 		if user.save
 			player = Player.find(player)

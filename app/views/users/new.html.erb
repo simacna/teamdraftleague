@@ -21,10 +21,6 @@
 				<%= f.password_field(:password_confirmation) %>
 			</p>
 			<p>
-				<%= f.label(:player) %>:
-				<%= f.collection_select(:player, @players, :id, :name) %>
-			</p>
-			<p>
 				<%= f.submit("Create User") %>
 			</p>
 		<% end %>
