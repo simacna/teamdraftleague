@@ -14,6 +14,7 @@ class Team < ActiveRecord::Base
   has_many :players, through: :player_team_histories
   has_many :seasons, through: :player_team_histories
 	has_many :matches
+	has_many :matches, class_name: "Match", foreign_key: "challenger_id"
 
 	validates(:name,     { :presence     => true })
 

@@ -6,6 +6,19 @@ class MatchesController < ApplicationController
 		if @match.winner != nil
 			@winner = Team.find(@match.winner)
 		end
+
+		emails = []
+
+		@match.team.players.uniq.each do |player|
+			emails << player.email
+		end
+
+		@match.challenger.players.uniq.each do |player|
+			emails << player.email
+		end
+
+		@email_link = "mailto:" + emails.join(",")
+
 	end
 
 	def edit
@@ -14,7 +27,7 @@ class MatchesController < ApplicationController
 			player = Player.find_by(user_id: current_user.id)
 			@match = Match.find(params["id"])
 			if current_user.admin
-			elsif player.team.id != @match.team.id || player.team.id != @match.challenger_id
+			elsif !player.teams.include?(@match.team) && !player.teams.include?(@match.challenger)
 				flash[:error] = "Permissions mismatch."
 				redirect_to "/matches/#{params["id"]}"
 			end

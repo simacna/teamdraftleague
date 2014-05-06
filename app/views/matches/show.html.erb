@@ -7,7 +7,21 @@
 	</div>
 	<div>
 		<% if @match.winner == nil %>
-			<a href="/matches/<%= @match.id %>/edit">Report your result!</a>
+			<% if logged_in? %>
+				<% player = Player.find_by(user_id: current_user.id) %>
+				<% if current_user.admin || player.teams.include?(@match.team) || player.teams.include?(@match.challenger) %>
+					<p>
+						<%= link_to "Email your opponents.", @email_link %>
+					</p>
+					<p>
+						<a href="/matches/<%= @match.id %>/edit">Report your result!</a>
+					</p>
+				<% end %>
+			<% else %>
+				<p>
+					No result reported.
+				</p>
+			<% end %>
 		<% else %>
 			<p>
 				<%= @winner.name %> won <%= @match.challonge_match_csv %>.
