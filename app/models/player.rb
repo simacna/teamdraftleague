@@ -14,6 +14,7 @@ class Player < ActiveRecord::Base
   has_many :player_team_histories
   has_many :teams, through: :player_team_histories
   has_many :seasons, through: :player_team_histories
+  has_many :individual_player_matches
 
 	validates(:name,     { :presence     => true })
 

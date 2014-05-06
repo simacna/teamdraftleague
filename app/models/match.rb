@@ -16,5 +16,6 @@ class Match < ActiveRecord::Base
 	belongs_to :season
 	belongs_to :team
 	belongs_to :challenger, class_name: "Team", foreign_key: "challenger_id"
+  has_many :individual_player_matches
 
 end
