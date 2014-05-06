@@ -18,6 +18,22 @@
 				<%= f.label("Games") %>:
 				<%= f.text_field(:challonge_match_csv, :placeholder => "0-0") %>
 			</p>
+			<h3>
+				Individual Match Results
+			</h3>
+			<p>
+				<em>Select individual match winners. (Leave any unnecessary fields blank.)</em>
+			</p>
+			<% index = 1 %>
+			<% @team_players.each do |player| %>
+				<% @challenger_players.each do |challenger| %>
+					<p>
+						<%= "#{player.name} and #{challenger.name}: " %>
+						<%= collection_select index, :id, Player.where("id = ? or id = ?", player.id, challenger.id), :id, :name, {:include_blank => "Please select"} %>
+					</p>
+					<% index += 1 %>
+				<% end %>
+			<% end %>
 			<p>
 				<%= f.submit("Submit Result") %>
 			</p>
