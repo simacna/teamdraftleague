@@ -127,6 +127,7 @@ class MatchesController < ApplicationController
 		winner = Team.find(winner_id)
 
 		match.update(winner: winner_id)
+		match.update(challonge_match_csv: match_csv)
 
 		if match.save
 			response = HTTParty.put("https://api.challonge.com/v1/tournaments/#{match.season.challonge_name}/matches/#{match.challonge_match_number}.json", :query => {:match => {:winner_id => "#{winner.challonge_team_number}", :scores_csv => "#{match_csv}"}}, :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
