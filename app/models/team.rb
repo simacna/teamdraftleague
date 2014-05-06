@@ -14,7 +14,6 @@ class Team < ActiveRecord::Base
   has_many :players, through: :player_team_histories
   has_many :seasons, through: :player_team_histories
 	has_many :matches
-	has_many :matches, class_name: "Match", foreign_key: "challenger_id"
 
 	validates(:name,     { :presence     => true })
 
@@ -35,6 +34,13 @@ class Team < ActiveRecord::Base
 			end
 		end
 
+	end
+
+	def all_matches
+		matches_as_team = Match.where(team_id: self)
+		matches_as_challenger = Match.where(challenger_id: self)
+		matches = matches_as_team + matches_as_challenger
+		return matches
 	end
 
 end
