@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505023259) do
+ActiveRecord::Schema.define(version: 20140506011540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,9 +28,15 @@ ActiveRecord::Schema.define(version: 20140505023259) do
     t.integer "challenger_challonge_number"
   end
 
+  # A very strange has_many_through table that keeps track of all player/team/season relationships
+  create_table "player_team_histories", force: true do |t|
+    t.integer "player_id"
+    t.integer "team_id"
+    t.integer "season_id"
+  end
+
   create_table "players", force: true do |t|
     t.string  "name"
-    t.integer "team_id"
     t.text    "bio"
     t.integer "user_id"
     t.string  "email"
@@ -47,7 +53,6 @@ ActiveRecord::Schema.define(version: 20140505023259) do
 
   create_table "teams", force: true do |t|
     t.string  "name"
-    t.integer "season_id"
     t.integer "challonge_team_number"
   end
 
