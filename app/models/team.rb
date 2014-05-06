@@ -13,7 +13,7 @@ class Team < ActiveRecord::Base
 	has_many :player_team_histories
   has_many :players, through: :player_team_histories
   has_many :seasons, through: :player_team_histories
-	has_many :matches, through: :season
+	has_many :matches
 
 	validates(:name,     { :presence     => true })
 
