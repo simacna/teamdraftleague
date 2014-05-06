@@ -9,8 +9,11 @@
 #
 
 class Player < ActiveRecord::Base
-	belongs_to :team
+	
 	belongs_to :user
+  has_many :player_team_histories
+  has_many :teams, through: :player_team_histories
+  has_many :seasons, through: :player_team_histories
 
 	validates(:name,     { :presence     => true })
 

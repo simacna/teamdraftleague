@@ -4,6 +4,7 @@ Player.delete_all
 Team.delete_all
 Match.delete_all
 Season.delete_all
+PlayerTeamHistory.delete_all
 
 
 # Create players from Season 1
@@ -68,107 +69,130 @@ season1.save
 hk1 = hugh_kramer.player_team_histories.create
 hk1.team = j_chan
 hk1.season = season1
+hk1.save
 js1 = jon_sieber.player_team_histories.create
 js1.team = j_chan
 js1.season = season1
+js1.save
 ao1 = alex_owen.player_team_histories.create
 ao1.team = j_chan
 ao1.season = season1
+ao1.save
 
 # Scryducks
 mj1 = matt_jones.player_team_histories.create
 mj1.team = scryducks
 mj1.season = season1
+mj1.save
 kb1 = kadar_brock.player_team_histories.create
 kb1.team = scryducks
 kb1.season = season1
+kb1.save
 nf1 = nick_forker.player_team_histories.create
 nf1.team = scryducks
 nf1.season = season1
+nf1.save
 
 # Cackasaurus 
 db1 = dan_black.player_team_histories.create
 db1.team = cackasaurus
 db1.season = season1
+db1.save
 dg1 = dan_garfield.player_team_histories.create
 dg1.team = cackasaurus
 dg1.season = season1
+dg1.save
 ak1 = austin_k.player_team_histories.create
 ak1.team = cackasaurus
 ak1.season = season1
+ak1.save
 
 # Jung Guns
 zb1 = zach_barash.player_team_histories.create
 zb1.team = jung_gunz
 zb1.season = season1
+zb1.save
 nh1 = nick_heppding.player_team_histories.create
 nh1.team = jung_gunz
 nh1.season = season1
+nh1.save
 rt1 = richard_tan.player_team_histories.create
 rt1.team = jung_gunz
 rt1.season = season1
+rt1.save
 
 # Life from the LOaM
 mg1 = monique_garraud.player_team_histories.create
 mg1.team = loam
 mg1.season = season1
+mg1.save
 os1 = orlando_santiago.player_team_histories.create
 os1.team = loam
 os1.season = season1
+os1.save
 al1 = anthony_lebron.player_team_histories.create
 al1.team = loam
 al1.season = season1
+al1.save
 
 # Clockwerk Bea(s)t(s)
 hs1 = hunter_slaton.player_team_histories.create
 hs1.team = clockwerk_beats
 hs1.season = season1
+hs1.save
 dm1 = david_mccoy.player_team_histories.create
 dm1.team = clockwerk_beats
 dm1.season = season1
+dm1.save
 bm1 = brendan_mcnamara.player_team_histories.create
 bm1.team = clockwerk_beats
-bm1.season1
-
+bm1.season = season1
+bm1.save
 
 # Team Handsome
 dn1 = dom_neitz.player_team_histories.create
 dn1.team = team_handsome
 dn1.season = season1
+dn1.save
 sm1 = sean_morse.player_team_histories.create
 sm1.team = team_handsome
 sm1.season = season1
+sm1.save
 dg1 = derek_gallen.player_team_histories.create
 dg1.team = team_handsome
 dg1.season = season1
+dg1.save
 
 # Abeysitters
 dh1 = dylan_heister.player_team_histories.create
 dh1.team = abeysitters
 dh1.season = season1
+dh1.save
 al1 = abe_lusk.player_team_histories.create
 al1.team = abeysitters
 al1.season = season1
+al1.save
 jp1 = jonathan_pena.player_team_histories.create
 jp1.team = abeysitters
 jp1.season = season1
+jp1.save
 
 # Set team challonge numbers
-j_chan.set_challonge_team_number
+j_chan.set_challonge_team_number(season1.name)
 j_chan.save
-scryducks.set_challonge_team_number
+scryducks.set_challonge_team_number(season1.name)
 scryducks.save
-cackasaurus.set_challonge_team_number
+cackasaurus.set_challonge_team_number(season1.name)
 cackasaurus.save
-jung_gunz.set_challonge_team_number
+jung_gunz.set_challonge_team_number(season1.name)
 jung_gunz.save
-loam.set_challonge_team_number
+loam.set_challonge_team_number(season1.name)
 loam.save
-clockwerk_beats.set_challonge_team_number
+clockwerk_beats.set_challonge_team_number(season1.name)
 clockwerk_beats.save
-team_handsome.set_challonge_team_number
+team_handsome.set_challonge_team_number(season1.name)
 team_handsome.save
-abeysitters.set_challonge_team_number
+abeysitters.set_challonge_team_number(season1.name)
 abeysitters.save
 
 # Create matches
@@ -321,76 +345,94 @@ sam_werbalowsky = Player.create(name: "Sam Werbalowsky", email: "swerbo@gmail.co
 ch2 = charles_hagaman.player_team_histories.create
 ch2.team = hagamemnites
 ch2.season = season2a
+ch2.save
 lx2 = li_xu.player_team_histories.create
 lx2.team = hagamemnites
 lx2.season = season2a
+lx2.save
 dg2 = dana_goldstein.player_team_histories.create
 dg2.team = hagamemnites
 dg2.season = season2a
+dg2.save
 js2 = jess_stirba.player_team_histories.create
 js2.team = hagamemnites
-js2.season = season2a 
+js2.season = season2a
+js2.save
 
 # Bongokratis
 rb2 = ryan_burniche.player_team_histories.create
 rb2.team = bongokratis
 rb2.season = season2a
+rb2.save
 ab2 = alex_buell.player_team_histories.create
 ab2.team = bongokratis
 ab2.season = season2a
+ab2.save
 ae2 = angel_espejo.player_team_histories.create
 ae2.team = bongokratis
 ae2.season = season2a
+ae2.save
 
 # Scryducks
 mj2 = matt_jones.player_team_histories.create
 mj2.team = scryducks
 mj2.season = season2a
+mj2.save
 kb2 = kadar_brock.player_team_histories.create
 kb2.team = scryducks
 kb2.season = season2a
+kb2.save
 nf2 = nick_forker.player_team_histories.create
 nf2.team = scryducks
 nf2.season = season2a
+nf2.save
 
 
 # Her Big Shister
 mh2 = mike_herbig.player_team_histories.create
 mh2.team = her_big
 mh2.season = season2a
+mh2.save
 js2 = joe_shi.player_team_histories.create
 js2.team = her_big
 js2.season = season2a
+js2.save
 dh2 = dylan_heister.player_team_histories.create
 dh2.team = her_big
 dh2.season = season2a
+dh2.save
 
 # J-Chan
 hk2 = hugh_kramer.player_team_histories.create
 hk2.team = j_chan
 hk2.season = season2a
+hk2.save
 jons2 = jon_sieber.player_team_histories.create
 jons2.team = j_chan
 jons2.season = season2a
+jons2.save
 ao2 = alex_owen.player_team_histories.create
 ao2.team = j_chan
 ao2.season = season2a
+ao2.save
 
 # Steve
 mc2 = matt_corazzelli.player_team_histories.create
 mc2.team = steve
 mc2.season = season2a
+mc2.save
 p2 = pourmal.player_team_histories.create
 p2.team = steve
 p2.season = season2a
+p2.save
 
 # Set team challonge numbers
-hagamemnites.set_challonge_team_number
-bongokratis.set_challonge_team_number
-scryducks.set_challonge_team_number
-her_big.set_challonge_team_number
-j_chan.set_challonge_team_number
-steve.set_challonge_team_number
+hagamemnites.set_challonge_team_number(season2a.name)
+bongokratis.set_challonge_team_number(season2a.name)
+scryducks.set_challonge_team_number(season2a.name)
+her_big.set_challonge_team_number(season2a.name)
+j_chan.set_challonge_team_number(season2a.name)
+steve.set_challonge_team_number(season2a.name)
 
 # Create matches
 
@@ -478,75 +520,93 @@ dustin_williamson = Player.create(name: "Dustin Williamson", email: "williamson.
 rc2 = ross_cooperman.player_team_histories.create
 rc2.team = rhox
 rc2.season = season2b
+rc2.save
 jm2 = jesse_ma.player_team_histories.create
 jm2.team = rhox
 jm2.season = season2b
+jm2.save
 tb2 = travis_batzer.player_team_histories.create
 tb2.team = rhox
 tb2.season = season2b
+tb2.save
 
 # Hail Slaton
 hs2 = hunter_slaton.player_team_histories.create
 hs2.team = hail_slaton
 hs2.season = season2b
+hs2.save
 dm2 = david_mccoy.player_team_histories.create
 dm2.team = hail_slaton
 dm2.season = season2b
+dm2.save
 bm2 = brendan_mcnamara.player_team_histories.create
 bm2.team = hail_slaton
 bm2.season = season2b
+bm2.save
 
 # Richard and the Tanimals
 rt2 = richard_tan.player_team_histories.create
 rt2.team = richard
 rt2.season = season2b
+rt2.save
 zb2 = zach_barash.player_team_histories.create
 zb2.team = richard
 zb2.season = season2b
+zb2.save
 nh2 = nick_heppding.player_team_histories.create
 nh2.team = richard
 nh2.season = season2b
+nh2.save
 
 # Goblin Bushwickers
 sm2 = sean_morse.player_team_histories.create
 sm2.team = goblin
 sm2.season = season2b
+sm2.save
 dg2 = derek_gallen.player_team_histories.create
 dg2.team = goblin
 dg2.season = season2b
+dg2.save
 dn2 = dom_neitz.player_team_histories.create
 dn2.team = goblin
 dn2.season = season2b
+dn2.save
 
 # Protect Ya Deck
 cl2 = collette_leroux.player_team_histories.create
 cl2.team = protect
 cl2.season = season2b
+cl2.save
 jp2 = jamie_parke.player_team_histories.create
 jp2.team = protect
 jp2.season = season2b
+jp2.save
 al2 = andy_longo.player_team_histories.create
 al2.team = protect
 al2.season = season2b
+al2.save
 
 # Les Lemures
 mb2 = matt_bradley.player_team_histories.create
 mb2.team = lemures
 mb2.season = season2b
+mb2.save
 tonyl2 = anthony_ling.player_team_histories.create
 tonyl2.team = lemures
 tonyl2.season = season2b
+tonyl2.save
 dw2 = dustin_williamson.player_team_histories.create
 dw2.team = lemures
 dw2.season = season2b
+dw2.save
 
 # Set team challonge number
-rhox.set_challonge_team_number
-hail_slaton.set_challonge_team_number
-richard.set_challonge_team_number
-goblin.set_challonge_team_number
-protect.set_challonge_team_number
-lemures.set_challonge_team_number
+rhox.set_challonge_team_number(season2b.name)
+hail_slaton.set_challonge_team_number(season2b.name)
+richard.set_challonge_team_number(season2b.name)
+goblin.set_challonge_team_number(season2b.name)
+protect.set_challonge_team_number(season2b.name)
+lemures.set_challonge_team_number(season2b.name)
 
 season2b.create_matches
 

@@ -27,7 +27,12 @@ class UsersController < ApplicationController
 				player = Player.find_by(email: user.email)
 				user.player = player
 				flash[:success] = "User successfully created. Welcome, #{user.name}!"
-				redirect_to("/admin")
+				if current_user && current_user.admin
+					redirect_to("/admin")
+				else
+					session[:user_id] = user.id
+					redirect_to("/schedule")
+				end
 			else
 				flash[:error] = "Something went wrong!"
 				redirect_to("/users/new")

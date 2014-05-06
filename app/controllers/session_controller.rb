@@ -7,10 +7,11 @@ class SessionController < ApplicationController
 		user = User.find_by(email: params[:email])
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
-			if user.admin
+			player = Player.find_by(user_id: user.id)
+			if current_user.admin
 				redirect_to("/admin")
 			else
-				redirect_to("/users/#{player.id}")
+				redirect_to("/schedule")
 			end
 		else
 			flash[:error] = "Failure to launch."

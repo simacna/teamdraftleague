@@ -9,18 +9,21 @@
 #
 
 class Team < ActiveRecord::Base
-	has_many :players, :dependent => :destroy
-	belongs_to :season
-	has_many :matches, :through => :season
+	
+	has_many :player_team_histories
+  has_many :players, through: :player_team_histories
+  has_many :seasons, through: :player_team_histories
+	has_many :matches, through: :season
 
 	validates(:name,     { :presence     => true })
 
 	# gets the challonge team id and adds it to the teams table
-	def set_challonge_team_number
+	def set_challonge_team_number(season_name)
 
-		season = self.season.challonge_name
+		season = Season.find_by(name: season_name)
+		season_challonge_name = season.challonge_name
 
-		teams = HTTParty.get("https://api.challonge.com/v1/tournaments/#{season}.json?include_participants=1", :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
+		teams = HTTParty.get("https://api.challonge.com/v1/tournaments/#{season_challonge_name}.json?include_participants=1", :basic_auth => {:username => "rdmccoy", :password => ENV["CHALLONGE_PASSWORD"] })
 		
 		teamz = teams['tournament']['participants']
 
