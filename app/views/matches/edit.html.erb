@@ -28,7 +28,7 @@
 			<% @team_players.each do |player| %>
 				<% @challenger_players.each do |challenger| %>
 					<p>
-						<%= "#{player.name} and #{challenger.name}: " %>
+						<%= "#{player.name} vs. #{challenger.name}: " %>
 						<%= collection_select index, :id, Player.where("id = ? or id = ?", player.id, challenger.id), :id, :name, {:include_blank => "Please select"} %>
 					</p>
 					<% index += 1 %>
