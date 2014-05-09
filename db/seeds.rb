@@ -425,6 +425,10 @@ p2 = pourmal.player_team_histories.create
 p2.team = steve
 p2.season = season2a
 p2.save
+sw2 = sam_werbalowsky.player_team_histories.create
+sw2.team = steve
+sw2.season = season2a
+sw2.save
 
 # Set team challonge numbers
 hagamemnites.set_challonge_team_number(season2a.name)
