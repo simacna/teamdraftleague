@@ -1,1 +1,35 @@
-_table.html.erb
+<% puts season %>
+<h2><%= season[:name] %></h2>
+
+<table class='scheduletable'>
+  <thead>
+    <tr>
+      <th class="columntitle">
+        Rank
+      </th>
+      <th class="columntitle">
+        Team
+      </th>
+      <th class="columntitle">
+        Record
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Will iterate over each team in the season and populate a table row -->
+    <% season[:standings].each_with_index do |team, index| %>
+      <tr>
+        <td class='rank'>
+          <%= index + 1 %>
+        </td>
+        <td class='teamname'>
+          <%= team[:name] %>
+        </td>
+        <td class='record'>
+          <%= "#{team[:wins]}-#{team[:losses]}" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>

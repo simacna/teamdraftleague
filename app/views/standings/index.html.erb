@@ -1,8 +1,10 @@
-<div class='standings'>
+<div class='schedule'>
   <div class="pagetitle">
     <h1>Standings</h1>
   </div>
   <div>
-    <%= render partial: "table", collection: @season, as: "season" %>
+    <% @standings.each do |season| %>
+      <%= render partial: "table", locals: {season: season } %>
+    <% end %>
   </div>
 </div>
