@@ -14,7 +14,7 @@ class StandingsController < ApplicationController
 
       season.teams.uniq.each do |team|
         # find the team's matches
-        matches = Match.where("team_id = ? or challenger_id = ? and season_id = ?", team.id, team.id, season.id)
+        matches = Match.where("team_id = ? and season_id = ? or challenger_id = ? and season_id = ?", team.id, season.id, team.id, season.id)
 
         # set initial records
         match_wins = 0
