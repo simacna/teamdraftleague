@@ -1,1 +1,8 @@
-index.html.erb
+<div class='standings'>
+  <div class="pagetitle">
+    <h1>Standings</h1>
+  </div>
+  <div>
+    <%= render partial: "table", collection: @season, as: "season" %>
+  </div>
+</div>

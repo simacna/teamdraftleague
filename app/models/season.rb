@@ -11,7 +11,7 @@ class Season < ActiveRecord::Base
 	
 	has_many :player_team_histories
   has_many :players, through: :player_team_histories
-  has_many :seasons, through: :player_team_histories
+  has_many :teams, through: :player_team_histories
 	has_many :matches
 
 	# Adds scheduled matches to the database assuming the presence of teams and a season that has been started (season.start API request)
